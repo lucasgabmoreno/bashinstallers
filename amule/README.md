@@ -1,19 +1,18 @@
 # aMule for Linux Mint installer
-![Portada](../../preview.png?raw=true)
+![Portada](preview.png?raw=true)
 - Version: aMule 2.3.2
-- OS: Linux Mint 20.2
 
 ## Install aMule:
 ```
 git clone https://github.com/lucasgabmoreno/amule-linuxmint.git
-cd amule-linuxmint
+cd amule-linuxmint/amule/
 bash install.sh
 ```
 
 ## Uninstall aMule:
 ```
 git clone https://github.com/lucasgabmoreno/amule-linuxmint.git
-cd amule-linuxmint
+cd amule-linuxmint/amule/
 bash uninstall.sh
 ```
 
