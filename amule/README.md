@@ -1,6 +1,5 @@
-# aMule for Linux Mint installer
+# aMule 2.3.2
 ![Portada](preview.png?raw=true)
-- Version: aMule 2.3.2
 
 ## Install aMule:
 ```
