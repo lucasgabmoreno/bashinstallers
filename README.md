@@ -1,5 +1,5 @@
 # Linux Mint Installers
-Install some native Linux software easy for the last stable version of Linux Mint (without flatpack, snap, wine) 
+Install some native Linux software for the last stable version of Linux Mint.
 
 * [aMule 2.3.2](amule)
 * [Blender 3.0](blender)
