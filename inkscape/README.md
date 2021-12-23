@@ -1,7 +1,5 @@
-# Inkscape for Linux Mint installer
+# Inkscape 1.1.1
 ![Portada](preview.png?raw=true)
-- Version: Inkscape 1.1.1
-- OS: Linux Mint 20.2
 
 ## Install Inkscape:
 ```
