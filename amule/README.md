@@ -3,15 +3,15 @@
 
 ## Install aMule:
 ```
-git clone https://github.com/lucasgabmoreno/amule-linuxmint.git
-cd amule-linuxmint/amule/
+git clone https://github.com/lucasgabmoreno/linuxmint-installers.git
+cd linuxmint-installers/amule/
 bash install.sh
 ```
 
 ## Uninstall aMule:
 ```
-git clone https://github.com/lucasgabmoreno/amule-linuxmint.git
-cd amule-linuxmint/amule/
+git clone https://github.com/lucasgabmoreno/linuxmint-installers.git
+cd linuxmint-installers/amule/
 bash uninstall.sh
 ```
 
