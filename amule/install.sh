@@ -7,12 +7,12 @@ bash uninstall.sh
 COMMON="amule-common_2.3.2+git20200530.3a77afb-1_all.deb"
 LIBWXBASE="libwxbase3.0-0v5_3.0.5.1+dfsg-2_amd64.deb"
 LIBWXGTK="libwxgtk3.0-gtk3-0v5_3.0.5.1+dfsg-2_amd64.deb"
-AMULE="amule_2.3.2+git20200530.3a77afb-1_amd64.deb"
-DAEMON="amule-daemon_2.3.2+git20200530.3a77afb-1_amd64.deb"
-UTILS="amule-utils_2.3.2+git20200530.3a77afb-1_amd64.deb"
-GUI="amule-utils-gui_2.3.2+git20200530.3a77afb-1_amd64.deb"
+AMULE="amule_2.3.2+git20200530.3a77afb-1+b1_amd64.deb"
+DAEMON="amule-daemon_2.3.2+git20200530.3a77afb-1+b1_amd64.deb"
+UTILS="amule-utils_2.3.2+git20200530.3a77afb-1+b1_amd64.deb"
+GUI="amule-utils-gui_2.3.2+git20200530.3a77afb-1+b1_amd64.deb"
 
-PATH_AMULE="http://archive.ubuntu.com/ubuntu/pool/universe/a/amule"
+PATH_AMULE="https://deb.sipwise.com/debian/pool/main/a/amule"
 PATH_WXWIDGETS="http://archive.ubuntu.com/ubuntu/pool/universe/w/wxwidgets3.0"
 
 # LIBCRYPTO++6
@@ -48,4 +48,3 @@ sudo rm -rf papirus-amule-theme
 sudo apt --fix-broken install -y
 
 sudo echo "eMule installed!"
-
