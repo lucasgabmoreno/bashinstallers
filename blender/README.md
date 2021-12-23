@@ -1,19 +1,18 @@
-# Blender for Linux Mint installer
-![Portada](https://github.com/lucasgabmoreno/blender-linuxmint/blob/main/preview.png?raw=true)
-- Version: Blender 3.0
-- OS: Linux Mint 20.2
+# Blender 3.0
+![Portada](preview.png?raw=true)
+
 
 ## Install Blender:
 ```
-git clone https://github.com/lucasgabmoreno/blender-linuxmint.git
-cd blender-linuxmint
+git clone https://github.com/lucasgabmoreno/linuxmint-installers.git
+cd linuxmint-installers/blender/
 bash install.sh
 ```
 
 ## Uninstall Blender:
 ```
-git clone https://github.com/lucasgabmoreno/blender-linuxmint.git
-cd blender-linuxmint
+git clone https://github.com/lucasgabmoreno/linuxmint-installers.git
+cd linuxmint-installers/blender/
 bash uninstall.sh
 ```
 
