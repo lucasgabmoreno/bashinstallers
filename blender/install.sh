@@ -5,8 +5,6 @@ bash uninstall.sh
 BLENDER="blender-3.0.0-linux-x64.tar.xz"
 PATH_OPT="/opt/blender"
 
-sudo rm -rf "$PATH_OPT"
-
 sudo wget "https://download.blender.org/release/Blender3.0/$BLENDER"
 
 sudo mkdir "$PATH_OPT"
