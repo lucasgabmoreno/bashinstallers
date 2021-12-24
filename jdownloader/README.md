@@ -15,6 +15,7 @@ cd linuxmint-installers/jdownloader/ && bash uninstall.sh
 
 ## What this will install:
 * jdownloader
+* megatools
 
 ## Thanks:
 * [JDownloader](https://jdownloader.org/)
