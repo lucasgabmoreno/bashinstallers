@@ -5,15 +5,13 @@
 ## Install Blender:
 ```
 git clone https://github.com/lucasgabmoreno/linuxmint-installers.git
-cd linuxmint-installers/blender/
-bash install.sh
+cd linuxmint-installers/blender/ && bash install.sh
 ```
 
 ## Uninstall Blender:
 ```
 git clone https://github.com/lucasgabmoreno/linuxmint-installers.git
-cd linuxmint-installers/blender/
-bash uninstall.sh
+cd linuxmint-installers/blender/ && bash uninstall.sh
 ```
 
 ## What this will install:
