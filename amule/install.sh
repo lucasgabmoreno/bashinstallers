@@ -1,5 +1,13 @@
 #!/bin/bash
 
+DESK_PATH=$(xdg-user-dir DESKTOP)
+
+wget_dpkg_rm () {
+sudo wget "$1/$2"
+sudo dpkg -i "$2"
+sudo rm -rf "$2"
+}
+
 #CLEAN
 bash uninstall.sh
 
@@ -18,19 +26,13 @@ PATH_WXWIDGETS="http://archive.ubuntu.com/ubuntu/pool/universe/w/wxwidgets3.0"
 # LIBCRYPTO++6
 sudo apt-get install libcrypto++6 -y
 
-downinstallrm () {
-sudo wget "$1/$2"
-sudo dpkg -i "$2"
-sudo rm -rf "$2"
-}
-
-downinstallrm $PATH_AMULE $COMMON
-downinstallrm $PATH_WXWIDGETS $LIBWXBASE
-downinstallrm $PATH_WXWIDGETS $LIBWXGTK
-downinstallrm $PATH_AMULE $AMULE
-downinstallrm $PATH_AMULE $DAEMON
-downinstallrm $PATH_AMULE $UTILS
-downinstallrm $PATH_AMULE $GUI
+wget_dpkg_rm $PATH_AMULE $COMMON
+wget_dpkg_rm $PATH_WXWIDGETS $LIBWXBASE
+wget_dpkg_rm $PATH_WXWIDGETS $LIBWXGTK
+wget_dpkg_rm $PATH_AMULE $AMULE
+wget_dpkg_rm $PATH_AMULE $DAEMON
+wget_dpkg_rm $PATH_AMULE $UTILS
+wget_dpkg_rm $PATH_AMULE $GUI
 
 # EMC
 sudo apt-get install amule-emc -y
@@ -47,4 +49,9 @@ sudo rm -rf papirus-amule-theme
 # FINAL FIXES
 sudo apt --fix-broken install -y
 
-sudo echo "eMule installed!"
+sudo chmod +x /usr/share/applications/amule.desktop 
+cp /usr/share/applications/amule.desktop "$DESK_PATH/"
+sudo chmod +x "$DESK_PATH/"amule.desktop
+
+sudo echo "aMule installed!"
+
