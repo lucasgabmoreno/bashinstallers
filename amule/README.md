@@ -1,17 +1,19 @@
 # aMule 2.3.2
 ![Portada](preview.png?raw=true)
 
-## Install aMule:
+## Install:
 ```
-git clone https://github.com/lucasgabmoreno/linuxmint-installers.git
-cd linuxmint-installers/amule/ && bash install.sh
+wget https://raw.githubusercontent.com/lucasgabmoreno/linuxmint-installers/main/amule/install.sh https://raw.githubusercontent.com/lucasgabmoreno/linuxmint-installers/main/amule/uninstall.sh
+bash install.sh
 ```
 
-## Uninstall aMule:
+## Uninstall:
 ```
-git clone https://github.com/lucasgabmoreno/linuxmint-installers.git
-cd linuxmint-installers/amule/ && bash uninstall.sh
+wget https://raw.githubusercontent.com/lucasgabmoreno/linuxmint-installers/main/amule/uninstall.sh
+bash uninstall.sh
 ```
+## Recommended:
+* [Papirus aMule Theme](https://github.com/PapirusDevelopmentTeam/papirus-amule-theme)
 
 ## What this will install:
 * libcrypto++6
@@ -23,10 +25,7 @@ cd linuxmint-installers/amule/ && bash uninstall.sh
 * amule-utils
 * amule-utils-gui
 * amule-emc
-* make
-* librsvg2-bin
-* zip
-* papirus amule icons (Preferences → Interface → Skin to use)
+
 
 ## Thanks:
 * [aMule](https://www.amule.org/)
