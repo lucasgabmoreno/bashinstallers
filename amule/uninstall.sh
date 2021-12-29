@@ -11,5 +11,7 @@ sudo rm -rf ~/.aMule 2> /dev/null
 DESK_PATH=$(xdg-user-dir DESKTOP)
 sudo rm -rf "$DESK_PATH/amule.desktop" 2> /dev/null
 
+if ([ "$1" != "noremove" ] && [ ! -f .noremove ]); then rm -rf uninstall.sh; fi
+
 echo "aMule uninstalled!"
 
