@@ -10,7 +10,7 @@ GIT="https://raw.githubusercontent.com/lucasgabmoreno/linuxmint-installers/main/
 ```
 sudo wget https://raw.githubusercontent.com/lucasgabmoreno/linuxmint-installers/main/amule/uninstall.sh && bash uninstall.sh
 ```
-## Optional:
+## Optional post install:
 * [Papirus aMule Theme](https://github.com/PapirusDevelopmentTeam/papirus-amule-theme)
 
 ## What this will install:
