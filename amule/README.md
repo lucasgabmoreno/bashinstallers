@@ -3,14 +3,14 @@
 
 ## Install:
 ```
-sudo wget https://raw.githubusercontent.com/lucasgabmoreno/linuxmint-installers/main/amule/install.sh https://raw.githubusercontent.com/lucasgabmoreno/linuxmint-installers/main/amule/uninstall.sh && bash install.sh
+GIT="https://raw.githubusercontent.com/lucasgabmoreno/linuxmint-installers/main/amule/" && sudo wget "$GIT"install.sh "$GIT"uninstall.sh && bash install.sh
 ```
 
 ## Uninstall:
 ```
 sudo wget https://raw.githubusercontent.com/lucasgabmoreno/linuxmint-installers/main/amule/uninstall.sh && bash uninstall.sh
 ```
-## Recommended:
+## Optional:
 * [Papirus aMule Theme](https://github.com/PapirusDevelopmentTeam/papirus-amule-theme)
 
 ## What this will install:
