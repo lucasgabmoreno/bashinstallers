@@ -1,5 +1,5 @@
 # Linux Mint Installers
-Install some native Linux software for the last stable Linux Mint version.
+Install easily some "difficult to insall" Linux software for the last stable Linux Mint version.
 
 ![Portada](preview.png?raw=true)
 
