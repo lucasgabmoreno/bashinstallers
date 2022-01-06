@@ -1,20 +1,17 @@
 # Blender 3.0
 ![Portada](preview.png?raw=true)
 
-
-## Install Blender:
+## Install:
 ```
-git clone https://github.com/lucasgabmoreno/linuxmint-installers.git
-cd linuxmint-installers/blender/ && bash install.sh
+GIT="https://raw.githubusercontent.com/lucasgabmoreno/linuxmint-installers/main/blender/" && sudo wget "$GIT"install.sh "$GIT"uninstall.sh && bash install.sh
 ```
 
-## Uninstall Blender:
+## Uninstall:
 ```
-git clone https://github.com/lucasgabmoreno/linuxmint-installers.git
-cd linuxmint-installers/blender/ && bash uninstall.sh
+sudo wget https://raw.githubusercontent.com/lucasgabmoreno/linuxmint-installers/main/blender/uninstall.sh && bash uninstall.sh
 ```
 
-## What this will install:
+## This will install:
 * blender
 
 ## Thanks:
