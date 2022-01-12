@@ -13,3 +13,6 @@ Install easily some Linux software
 
 # Tested distros
 * Linux Mint (Ubuntu)
+
+## Thanks:
+* [Papirus](https://github.com/PapirusDevelopmentTeam)
