@@ -1,9 +1,6 @@
 # Bash Installers
 Install easily some Linux software
 
-
-![Portada](preview.png?raw=true)
-
 ## Software
 * [aMule 2.3.2](amule)
 * [Blender 3.0](blender)
@@ -13,6 +10,3 @@ Install easily some Linux software
 
 ## Tested distros
 * Linux Mint (Ubuntu)
-
-## Thanks:
-* [Papirus](https://github.com/PapirusDevelopmentTeam)
