@@ -13,7 +13,7 @@ sudo wget https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/a
 ## Recommended:
 * [Papirus aMule Theme](https://github.com/PapirusDevelopmentTeam/papirus-amule-theme)
 
-## Included:
+## Software installed:
 * libcrypto++6
 * amule-common
 * libwxbase
