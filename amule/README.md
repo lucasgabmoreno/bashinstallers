@@ -3,17 +3,17 @@
 
 ## Install:
 ```
-GIT="https://raw.githubusercontent.com/lucasgabmoreno/linuxmint-installers/main/amule/" && sudo wget "$GIT"install.sh "$GIT"uninstall.sh && bash install.sh
+GIT="https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/amule/" && sudo wget "$GIT"install.sh "$GIT"uninstall.sh && bash install.sh
 ```
 
 ## Uninstall:
 ```
-sudo wget https://raw.githubusercontent.com/lucasgabmoreno/linuxmint-installers/main/amule/uninstall.sh && bash uninstall.sh
+sudo wget https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/amule/uninstall.sh && bash uninstall.sh
 ```
 ## Recommended:
 * [Papirus aMule Theme](https://github.com/PapirusDevelopmentTeam/papirus-amule-theme)
 
-## This will install:
+## Included:
 * libcrypto++6
 * amule-common
 * libwxbase
