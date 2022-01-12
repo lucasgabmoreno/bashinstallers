@@ -3,20 +3,18 @@
 
 ## Install Inkscape:
 ```
-git clone https://github.com/lucasgabmoreno/linuxmint-installers.git
-cd linuxmint-installers/inkscape && bash install.sh
+GIT="https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/inkscape/" && sudo wget "$GIT"install.sh "$GIT"uninstall.sh && bash install.sh
+
 ```
 
 ## Uninstall Inkscape:
 ```
-git clone https://github.com/lucasgabmoreno/linuxmint-installers.git
-cd linuxmint-installers/inkscape && bash uninstall.sh
+sudo wget https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/inkscape/uninstall.sh && bash uninstall.sh
 ```
 
-## What this will install:
+## Software installed:
 * inkscape
 
 ## Thanks:
 * [Inkscape](https://inkscape.org/es/release/inkscape-1.1/gnulinux/ubuntu/ppa/)
 * [Papirus](https://github.com/PapirusDevelopmentTeam)
-
