@@ -3,17 +3,15 @@
 
 ## Install OnlyOffice:
 ```
-git clone https://github.com/lucasgabmoreno/linuxmint-installers.git
-cd linuxmint-installers/onlyoffice/ && bash install.sh
+GIT="https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/onlyoffice/" && sudo wget "$GIT"install.sh "$GIT"uninstall.sh && bash install.sh
 ```
 
 ## Uninstall OnlyOffice:
 ```
-git clone https://github.com/lucasgabmoreno/linuxmint-installers.git
-cd linuxmint-installers/onlyoffice/ && bash uninstall.sh
+sudo wget https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/onlyoffice/uninstall.sh && bash uninstall.sh
 ```
 
-## What this will install:
+## Software installed:
 * onlyoffice-dektopeditors
 * fonts-crosextra-carlito
 
