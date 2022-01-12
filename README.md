@@ -1,5 +1,5 @@
 # Bash Installers
-Install easily some Linux software
+Easily install some Linux software
 
 ## Software
 * [aMule 2.3.2](amule)
