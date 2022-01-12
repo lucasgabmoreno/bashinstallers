@@ -10,9 +10,6 @@ GIT="https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/amule/
 ```
 sudo wget https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/amule/uninstall.sh && bash uninstall.sh
 ```
-## Recommended:
-* [Papirus aMule Theme](https://github.com/PapirusDevelopmentTeam/papirus-amule-theme)
-
 ## Software installed:
 * libcrypto++6
 * amule-common
@@ -24,6 +21,8 @@ sudo wget https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/a
 * amule-utils-gui
 * amule-emc
 
+## Recommended:
+* [Papirus aMule Theme](https://github.com/PapirusDevelopmentTeam/papirus-amule-theme)
 
 ## Thanks:
 * [aMule](https://www.amule.org/)
