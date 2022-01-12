@@ -3,17 +3,15 @@
 
 ## Install Jdownloader:
 ```
-git clone https://github.com/lucasgabmoreno/linuxmint-installers.git
-cd linuxmint-installers/jdownloader/ && bash install.sh
+GIT="https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/jdownloader/" && sudo wget "$GIT"install.sh "$GIT"uninstall.sh && bash install.sh
 ```
 
 ## Uninstall Jdownloader:
 ```
-git clone https://github.com/lucasgabmoreno/linuxmint-installers.git
-cd linuxmint-installers/jdownloader/ && bash uninstall.sh
+sudo wget https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/jdownloader/uninstall.sh && bash uninstall.sh
 ```
 
-## What this will install:
+## Software installed:
 * jdownloader
 * megatools
 
