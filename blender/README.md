@@ -3,15 +3,15 @@
 
 ## Install:
 ```
-GIT="https://raw.githubusercontent.com/lucasgabmoreno/linuxmint-installers/main/blender/" && sudo wget "$GIT"install.sh "$GIT"uninstall.sh && bash install.sh
+GIT="https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/blender/" && sudo wget "$GIT"install.sh "$GIT"uninstall.sh && bash install.sh
 ```
 
 ## Uninstall:
 ```
-sudo wget https://raw.githubusercontent.com/lucasgabmoreno/linuxmint-installers/main/blender/uninstall.sh && bash uninstall.sh
+sudo wget https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/blender/uninstall.sh && bash uninstall.sh
 ```
 
-## This will install:
+## Software installed:
 * blender
 
 ## Thanks:
