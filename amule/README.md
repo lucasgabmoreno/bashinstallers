@@ -1,7 +1,7 @@
 # aMule 2.3.2
-![Portada](preview.png?raw=true)
+![Portada](preview.svg?raw=true)
 
-## Install:
+## Install
 ```
 GIT="https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/amule/" && sudo wget "$GIT"install.sh "$GIT"uninstall.sh && bash install.sh
 ```
