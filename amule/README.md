@@ -1,5 +1,5 @@
 # aMule 2.3.2
-![Portada](preview.svg?raw=true)
+<img src="https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/amule/preview.svg" width="200">
 
 ## Install
 ```
