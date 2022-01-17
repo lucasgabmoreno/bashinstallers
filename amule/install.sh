@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Start count
+START_TIME=`date +%s` 
+
 # Remove old versions and trash
 bash uninstall.sh noremove
 
@@ -17,7 +20,7 @@ DAEMON="amule-daemon_2.3.2+git20200530.3a77afb-1+b1_amd64.deb"
 UTILS="amule-utils_2.3.2+git20200530.3a77afb-1+b1_amd64.deb"
 GUI="amule-utils-gui_2.3.2+git20200530.3a77afb-1+b1_amd64.deb"
 wget_dpkg_rm () {
-sudo wget "$1/$2"
+sudo wget -t inf "$1/$2"
 sudo dpkg -i "$2"
 sudo rm -rf "$2"
 }
@@ -37,12 +40,17 @@ sudo apt --fix-broken install -y
 
 # Create desktop launcher
 DESK_PATH=$(xdg-user-dir DESKTOP)
-sudo chmod +x /usr/share/applications/amule.desktop 
-cp /usr/share/applications/amule.desktop "$DESK_PATH/"
+APP_PATH="/usr/share/applications/amule.desktop"
+sudo chmod +x $APP_PATH
+cp $APP_PATH "$DESK_PATH/"
 sudo chmod +x "$DESK_PATH/"amule.desktop
 
 # Remove this insaller
 if [ ! -f .noremove ]; then rm -rf install.sh uninstall.sh; fi
 
 # Final message
-sudo echo "aMule installed!"
+if [ -e $APP_PATH ]; then 
+sudo echo 'aMule installed in '$(date -d @$((`date +%s`-$START_TIME)) -u +%H:%M:%S)
+else
+echo 'ERROR!!! Please copy the error message and paste them into https://github.com/lucasgabmoreno/bashinstallers/issues.'
+fi

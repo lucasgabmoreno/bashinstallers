@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Close
+kill $(pidof amule) 2> /dev/null
+
 # Hold dependencies
 sudo apt-mark hold libcrypto++6 2> /dev/null
 
@@ -22,5 +25,9 @@ sudo rm -rf "$DESK_PATH/amule.desktop" 2> /dev/null
 if ([ "$1" != "noremove" ] && [ ! -f .noremove ]); then rm -rf uninstall.sh; fi
 
 # Final message
+APP_PATH="/usr/share/applications/amule.desktop"
+if [ ! -e $APP_PATH ]; then 
 echo "aMule uninstalled!"
-
+else
+echo 'ERROR!!! Please copy the error message and paste them into https://github.com/lucasgabmoreno/bashinstallers/issues.'
+fi
