@@ -13,7 +13,7 @@ sudo wget https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/f
 
 ## Software installed:
 * freefilesync
-* raltimesync
+* realtimesync
 
 ## Thanks:
 * [FreeFileSync](https://freefilesync.org/download.php)
