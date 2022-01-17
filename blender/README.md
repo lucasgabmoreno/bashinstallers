@@ -1,5 +1,5 @@
 # Blender 3.0
-<img src="https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/amule/preview.svg" width="200">
+<img src="preview.svg" width="200">
 
 ## Install:
 ```
