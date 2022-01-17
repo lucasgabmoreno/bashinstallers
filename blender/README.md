@@ -1,5 +1,5 @@
 # Blender 3.0
-![Portada](preview.png?raw=true)
+![Portada](preview.svg?raw=true)
 
 ## Install:
 ```
