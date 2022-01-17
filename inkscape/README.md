@@ -1,5 +1,5 @@
 # Inkscape 1.1.1
-![Portada](preview.png?raw=true)
+<img src="preview.svg" width="200">
 
 ## Install Inkscape:
 ```
