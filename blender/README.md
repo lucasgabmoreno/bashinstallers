@@ -1,5 +1,5 @@
 # Blender 3.0
-![Portada](preview.svg?raw=true)
+<img src="https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/amule/preview.svg" width="200">
 
 ## Install:
 ```
