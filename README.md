@@ -8,6 +8,7 @@ Easily install some Linux software
 * [FreeFileSync 11.16](freefilesync)
 * [Inkscape 1.1.1](inkscape)
 * [JDownloader 2](jdownloader)
+* [Mailspring 1.9.2](mailspring)
 * [OnlyOffice 6.4.2.6](onlyoffice)
 
 ## Tested distros
