@@ -1,5 +1,5 @@
 # OnlyOffice 6.4.2.6
-![Portada](preview.png?raw=true)
+<img src="preview.svg" width="200">
 
 ## Install OnlyOffice:
 ```
