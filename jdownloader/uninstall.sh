@@ -1,11 +1,31 @@
 #!/bin/bash
 
-sudo flatpak uninstall org.jdownloader.JDownloader* -y
+# Close
+# kill $(pidof jdownloader?) 2> /dev/null
+# (can't find process name)
 
-sudo rm -rf /opt/jd2/
-sudo rm -rf ~/.local/share/applications/JDownloader\ 2.desktop
-sudo rm -rf ~/.local/share/applications/JDownloader\ 2\ Update\ \&\ Rescue.desktop
-sudo rm -rf ~/.local/share/icons/jdownloader.png
+# Uninstall
+sudo flatpak uninstall org.jdownloader.JDownloader* -y 2> /dev/null
+sudo bash "/opt/jd2/Uninstall JDownloader" 2> /dev/null
 
+# Remove trash
+DESK_PATH=$(xdg-user-dir DESKTOP)
+sudo rm -rf "$DESK_PATH/"JDownloader* 2> /dev/null
+sudo rm -rf /usr/share/applications/JDownloader* 2> /dev/null
+sudo rm -rf /usr/share/icons/jdownloader* 2> /dev/null
+sudo rm -rf /opt/jd2* 2> /dev/null
+sudo rm -rf /tmp/JDownloader** 2> /dev/null
+
+# Remove this uninstaller
+if ([ "$1" != "noremove" ] && [ ! -f .noremove ]); then rm -rf uninstall.sh; fi
+
+# Final message
+APP_PATH="/usr/share/applications/JDownloader 2-0.desktop"
+if [ ! -e "$APP_PATH" ]; then 
 echo "JDownloader uninstalled!"
+else
+echo 'ERROR!!! Please copy the error message and paste them into https://github.com/lucasgabmoreno/bashinstallers/issues.'
+fi
+
+
 

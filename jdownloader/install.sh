@@ -1,23 +1,47 @@
 #!/bin/bash
 
-bash uninstall.sh
+# Start count
+START_TIME=`date +%s` 
 
+# Remove old versions and trash
+bash uninstall.sh noremove
+
+# Install dependencies
 sudo apt-get install megatools -y
+
+# Install
 megadl --print-names 'https://mega.nz/#!LJ9FyK7b!t88t6YBo2Wm_ABkSO7GikxujDF5Hddng9bgDb8fwoJQ'
 sudo bash JD2Setup_x64.sh
 sudo rm -rf JD2Setup_x64.sh
 
-sudo rm -rf "/usr/share/applications/JDownloader 2-0.desktop"
-sudo rm -rf "/usr/share/applications/JDownloader 2 Update & Rescue-0.desktop"
+# Final fixes
+sudo apt --fix-broken install -y
 
-sudo sed -i 's|Icon=/opt/jd2/.install4j/JDownloader2.png|Icon=jdownloader|g' "/opt/jd2/JDownloader 2.desktop"
-sudo sed -i 's|Icon=/opt/jd2/.install4j/JDownloader2Update.png|Icon=jdownloader|g' "/opt/jd2/JDownloader 2 Update & Rescue.desktop"
+# Create desktop launcher
+DESK_PATH=$(xdg-user-dir DESKTOP)
+APP_PATH="/usr/share/applications/JDownloader 2-0.desktop"
+APP_PATH2="/usr/share/applications/JDownloader 2 Update & Rescue-0.desktop"
+sudo sed -i 's|Icon=/opt/jd2/.install4j/JDownloader2.png|Icon=jdownloader|g' "$APP_PATH"
+sudo sed -i 's|Icon=/opt/jd2/.install4j/JDownloader2Update.png|Icon=jdownloader|g' "$APP_PATH2"
+sudo chown $USER:$USER "$APP_PATH"
+sudo chown $USER:$USER "$APP_PATH2"
+APP_PATH_STR=$(paste "$APP_PATH")
+if [[ "$APP_PATH_STR" != *"StartupWMClass"* ]]; then
+sudo echo "StartupWMClass=JDownloader" >> "$APP_PATH"
+sudo echo "StartupWMClass=JDownloader" >> "$APP_PATH2"
+fi
+sudo cp "/opt/jd2/.install4j/JDownloader2.png" /usr/share/icons/jdownloader.png
+sudo cp "$APP_PATH" "$DESK_PATH/"
+sudo chmod +x "$DESK_PATH/"JDownloader\ 2-0.desktop
+sudo chown $USER:$USER "$DESK_PATH/"JDownloader\ 2-0.desktop
 
-sudo cp "/opt/jd2/JDownloader 2.desktop" ~/.local/share/applications/
-sudo cp "/opt/jd2/JDownloader 2 Update & Rescue.desktop" ~/.local/share/applications/
+# Remove this insaller
+if [ ! -f .noremove ]; then rm -rf install.sh uninstall.sh; fi
 
-sudo chown $USER:$USER ~/.local/share/applications/JDownloader\ 2.desktop
-sudo chown $USER:$USER ~/.local/share/applications/JDownloader\ 2\ Update\ \&\ Rescue.desktop
-
-sudo cp "/opt/jd2/.install4j/JDownloader2.png" ~/.local/share/icons/jdownloader.png
+# Final message
+if [ -e "$APP_PATH" ]; then 
+sudo echo 'JDownloader  installed in '$(date -d @$((`date +%s`-$START_TIME)) -u +%H:%M:%S)
+else
+echo 'ERROR!!! Please copy the error message and paste them into https://github.com/lucasgabmoreno/bashinstallers/issues.'
+fi
 

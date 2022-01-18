@@ -1,5 +1,5 @@
 # Jdownloader 2
-![Portada](preview.png?raw=true)
+<img src="preview.svg" width="200">
 
 ## Install Jdownloader:
 ```
