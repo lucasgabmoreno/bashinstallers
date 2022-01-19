@@ -29,6 +29,9 @@ sudo cp $FROM_PATH "$DESK_PATH/"
 sudo chmod +x "$DESK_PATH/"onlyoffice-desktopeditors.desktop
 sudo chown $USER:$USER "$DESK_PATH/"onlyoffice-desktopeditors.desktop
 
+# Remove trash
+sudo rm -rf ~/.local/share/applications/Desktopeditors* 2> /dev/null
+
 # Remove this insaller
 if [ ! -f .noremove ]; then rm -rf install.sh uninstall.sh; fi
 

@@ -16,6 +16,7 @@ sudo rm -rf "$DESK_PATH/"onlyoffice-desktopeditors.desktop 2> /dev/null
 sudo rm -rf $FROM_PATH
 sudo rm -rf ~/.config/onlyoffice* 2> /dev/null
 sudo rm -rf ~/.local/share/onlyoffice* 2> /dev/null
+sudo rm -rf ~/.local/share/applications/Desktopeditors* 2> /dev/null
 
 # Remove this uninstaller
 if ([ "$1" != "noremove" ] && [ ! -f .noremove ]); then rm -rf uninstall.sh; fi
