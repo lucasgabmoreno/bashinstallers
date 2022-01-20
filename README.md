@@ -4,6 +4,7 @@ Easily install some Linux software
 ## Software
 * [aMule 2.3.2](amule)
 * [Blender 3.0](blender)
+* [Broadcom BCM43x](bcm43x)
 * [Google Chrome](chrome)
 * [FreeFileSync 11.16](freefilesync)
 * [Inkscape 1.1.1](inkscape)
