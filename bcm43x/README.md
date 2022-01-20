@@ -33,5 +33,3 @@ sudo wget https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/b
 * [Winterheart](https://github.com/winterheart/broadcom-bt-firmware)
 * [Wikipedia](https://upload.wikimedia.org/wikipedia/commons/0/06/Broadcom_Ltd_Logo.svg)
 * Broadcom [Support Document and Downloads](http://www.broadcom.com/support/802.11/linux_sta.php), [14.3RU1](https://linux-repo.us.securitycloud.symantec.com/sep_linux/14.3RU1/supported_kernels.html) & [14.3RU1](https://linux-repo.us.securitycloud.symantec.com/sep_linux/14.3RU2/supported_kernels.html)
-*
-
