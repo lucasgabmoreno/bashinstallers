@@ -1,5 +1,6 @@
 # Bash Installers
 Easily install some Linux Mint software without snaps and flatpacks.
+
 <img src="preview.svg" width="200">
 
 ## Software
