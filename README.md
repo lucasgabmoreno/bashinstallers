@@ -1,5 +1,6 @@
 # Bash Installers
-Easily install some Linux software
+Easily install some Linux Mint software without snaps and flatpacks.
+<img src="preview.svg" width="200">
 
 ## Software
 * [aMule 2.3.2](amule)
@@ -12,5 +13,5 @@ Easily install some Linux software
 * [Mailspring 1.9.2](mailspring)
 * [OnlyOffice 6.4.2.6](onlyoffice)
 
-## Tested distros
-* Linux Mint (Ubuntu)
+## Thanks:
+* [Papirus](https://github.com/PapirusDevelopmentTeam)
