@@ -14,6 +14,9 @@ sudo wget https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/c
 ## Software installed:
 * google-chrome-stable
 
+## Also works on:
+* Ubuntu
+
 ## Thanks:
 * [Google](https://www.google.com/intl/es-419/chrome/)
 * [Papirus](https://github.com/PapirusDevelopmentTeam)
