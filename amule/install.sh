@@ -24,13 +24,13 @@ sudo wget -t inf "$1/$2"
 sudo dpkg -i "$2"
 sudo rm -rf "$2"
 }
-wget_dpkg_rm $PATH_AMULE $COMMON
-wget_dpkg_rm $PATH_WXWIDGETS $LIBWXBASE
-wget_dpkg_rm $PATH_WXWIDGETS $LIBWXGTK
-wget_dpkg_rm $PATH_AMULE $AMULE
-wget_dpkg_rm $PATH_AMULE $DAEMON
-wget_dpkg_rm $PATH_AMULE $UTILS
-wget_dpkg_rm $PATH_AMULE $GUI
+wget_dpkg_rm "$PATH_AMULE" "$COMMON"
+wget_dpkg_rm "$PATH_WXWIDGETS" "$LIBWXBASE"
+wget_dpkg_rm "$PATH_WXWIDGETS" "$LIBWXGTK"
+wget_dpkg_rm "$PATH_AMULE" "$AMULE"
+wget_dpkg_rm "$PATH_AMULE" "$DAEMON"
+wget_dpkg_rm "$PATH_AMULE" "$UTILS"
+wget_dpkg_rm "$PATH_AMULE" "$GUI"
 
 # Install aMule-EMC
 sudo apt-get install amule-emc -y
@@ -41,9 +41,13 @@ sudo apt --fix-broken install -y
 # Create desktop launcher
 DESK_PATH=$(xdg-user-dir DESKTOP)
 APP_PATH="/usr/share/applications/amule.desktop"
-sudo chmod +x $APP_PATH
-cp $APP_PATH "$DESK_PATH/"
-sudo chmod +x "$DESK_PATH/"amule.desktop
+chmodown() {
+sudo chmod +x "$1"
+sudo chown $USER:$USER "$1"
+}
+chmodown "$APP_PATH"
+cp "$APP_PATH" "$DESK_PATH/"
+chmodown "$DESK_PATH/amule.desktop"
 
 # Remove this insaller
 if [ ! -f .noremove ]; then rm -rf install.sh uninstall.sh; fi
