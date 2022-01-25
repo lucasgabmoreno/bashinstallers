@@ -14,7 +14,7 @@ sudo wget -t inf "$1/$2"
 sudo dpkg -i "$2"
 sudo rm -rf "$2"
 }
-wget_dpkg_rm $PATH_CHROME $CHROME
+wget_dpkg_rm "$PATH_CHROME" "$CHROME"
 
 # Final fixes
 sudo apt --fix-broken install -y
@@ -22,8 +22,14 @@ sudo apt --fix-broken install -y
 # Create desktop launcher
 DESK_PATH=$(xdg-user-dir DESKTOP)
 APP_PATH="/usr/share/applications/google-chrome.desktop"
-cp $APP_PATH "$DESK_PATH/"
-sudo chmod +x "$DESK_PATH/"google-chrome.desktop
+chmodown() {
+sudo chmod +x "$1"
+sudo chown $USER:$USER "$1"
+}
+chmodown "$APP_PATH"
+sudo cp $APP_PATH "$DESK_PATH/"
+chmodown "$DESK_PATH/google-chrome.desktop"
+
 
 # Remove this insaller
 if [ ! -f .noremove ]; then rm -rf install.sh uninstall.sh; fi
