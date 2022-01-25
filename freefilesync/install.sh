@@ -10,11 +10,11 @@ bash uninstall.sh noremove
 VERSION="FreeFileSync_11.16"
 FREEFILESYNC=$VERSION"_Linux.tar.gz"
 FREEFILESYNC_RUN=$VERSION"_Install.run"
-sudo wget -t inf "https://freefilesync.org/download/"$FREEFILESYNC
-sudo tar -xf $FREEFILESYNC
-sudo chmod +x $FREEFILESYNC_RUN
+sudo wget -t inf "https://freefilesync.org/download/$FREEFILESYNC"
+sudo tar -xf "$FREEFILESYNC"
+sudo chmod +x "$FREEFILESYNC_RUN"
 sudo ./$FREEFILESYNC_RUN
-sudo rm -rf $FREEFILESYNC_RUN $FREEFILESYNC
+sudo rm -rf "$FREEFILESYNC_RUN" "$FREEFILESYNC"
 
 # Final fixes
 sudo apt --fix-broken install -y

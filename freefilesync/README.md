@@ -5,6 +5,8 @@
 ```
 GIT="https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/freefilesync/" && sudo wget "$GIT"install.sh "$GIT"uninstall.sh && bash install.sh
 ```
+Install on /opt/FreeFileSync or /home/username/FreeFileSync default folders. 
+If you need to change them, you must download and modify [install.sh](install.sh) and [uninstall.sh](uninstall.sh).
 
 ## Uninstall:
 ```
