@@ -18,13 +18,17 @@ sudo rm -rf "$BLENDER"
 DESK_PATH=$(xdg-user-dir DESKTOP)
 USER_PATH=$(xdg-user-dir)
 APP_PATH=~/.local/share/applications/blender.desktop
+chmodown() {
+sudo chmod +x "$1"
+sudo chown $USER:$USER "$1"
+}
 sudo sed -i "s|Exec=blender|Exec=$USER_PATH/blender/blender|g" "$BLENDER_PATH/blender.desktop"
+chmodown "$BLENDER_PATH/blender.desktop"
 sudo cp "$BLENDER_PATH/blender.desktop" ~/.local/share/applications/
 sudo cp "$BLENDER_PATH/blender.svg" ~/.local/share/icons/
-sudo chown $USER:$USER $APP_PATH
-sudo chmod +x $APP_PATH
+chmodown "$APP_PATH"
 cp $APP_PATH "$DESK_PATH/"
-sudo chmod +x "$DESK_PATH/"blender.desktop
+chmodown "$DESK_PATH/blender.desktop"
 
 # Remove this insaller
 if [ ! -f .noremove ]; then rm -rf install.sh uninstall.sh; fi
@@ -33,5 +37,5 @@ if [ ! -f .noremove ]; then rm -rf install.sh uninstall.sh; fi
 if [ -e $APP_PATH ]; then 
 sudo echo 'Blender installed in '$(date -d @$((`date +%s`-$START_TIME)) -u +%H:%M:%S)
 else
-echo 'ERROR!!! Please copy the error message and paste them into https://github.com/lucasgabmoreno/bashinstallers/issues.'
+echo 'ERROR!!! Please copy the error message and paste them into https://github.com/lucasgabmoreno/bashinstallers/issues'
 fi
