@@ -32,8 +32,15 @@ else
     sudo wget -t inf https://github.com/winterheart/broadcom-bt-firmware/raw/master/brcm/$BT_FW_HCD
     sudo mv $BT_FW_HCD /lib/firmware/brcm/$BT_FW_HCD
     sudo rm -rf $BT_FW_HCD
-    sudo echo 'Installed in '$(date -d @$((`date +%s`-$START_TIME)) -u +%H:%M:%S)
-    sudo echo "Please reboot!"
+    if [[ $(sudo apt list broadcom*  2> /dev/null) == *"broadcom"* ]]; then 
+        sudo echo 'Installed in '$(date -d @$((`date +%s`-$START_TIME)) -u +%H:%M:%S)
+        sudo echo "Please reboot!"    
+    elif [[ $(sudo apt list bcmwl*  2> /dev/null) == *"bcmwl"* ]]; then
+        sudo echo 'Installed in '$(date -d @$((`date +%s`-$START_TIME)) -u +%H:%M:%S)
+        sudo echo "Please reboot!"
+    else
+        echo 'ERROR!!! Please copy the error message and paste them into https://github.com/lucasgabmoreno/bashinstallers/issues'
+    fi
 fi
 
 # Remove this insaller
