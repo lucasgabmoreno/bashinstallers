@@ -1,5 +1,19 @@
 #!/bin/bash
 
+# Functions
+chmodown() {
+sudo chmod +x "$1"
+sudo chown $USER:$USER "$1"
+}
+wget_dpkg_rm () {
+sudo wget -t inf "$1/$2"
+if [ ! -f "$2" ]; then curl -L -O "$1/$2"; fi
+sudo mv "$2" inst.deb
+chmodown inst.deb
+sudo dpkg -i inst.deb
+sudo rm -rf inst.deb
+}
+
 # Start count
 START_TIME=`date +%s` 
 
@@ -19,11 +33,6 @@ AMULE="amule_2.3.2+git20200530.3a77afb-1+b1_amd64.deb"
 DAEMON="amule-daemon_2.3.2+git20200530.3a77afb-1+b1_amd64.deb"
 UTILS="amule-utils_2.3.2+git20200530.3a77afb-1+b1_amd64.deb"
 GUI="amule-utils-gui_2.3.2+git20200530.3a77afb-1+b1_amd64.deb"
-wget_dpkg_rm () {
-sudo wget -t inf "$1/$2"
-sudo dpkg -i "$2"
-sudo rm -rf "$2"
-}
 wget_dpkg_rm "$PATH_AMULE" "$COMMON"
 wget_dpkg_rm "$PATH_WXWIDGETS" "$LIBWXBASE"
 wget_dpkg_rm "$PATH_WXWIDGETS" "$LIBWXGTK"
@@ -41,10 +50,6 @@ sudo apt --fix-broken install -y
 # Create desktop launcher
 DESK_PATH=$(xdg-user-dir DESKTOP)
 APP_PATH="/usr/share/applications/amule.desktop"
-chmodown() {
-sudo chmod +x "$1"
-sudo chown $USER:$USER "$1"
-}
 chmodown "$APP_PATH"
 cp "$APP_PATH" "$DESK_PATH/"
 chmodown "$DESK_PATH/amule.desktop"

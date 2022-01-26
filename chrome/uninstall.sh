@@ -17,8 +17,7 @@ sudo rm -rf ~/.config/google-chrome* 2> /dev/null
 if ([ "$1" != "noremove" ] && [ ! -f .noremove ]); then rm -rf uninstall.sh; fi
 
 # Final message
-APP_PATH="/usr/share/applications/google-chrome.desktop"
-if [ ! -e $APP_PATH ]; then 
+if [[ $(sudo apt list google-chrome*  2> /dev/null) != *"google-chrome"* ]]; then 
 echo "Google Chrome uninstalled!"
 else
 echo 'ERROR!!! Please copy the error message and paste them into https://github.com/lucasgabmoreno/bashinstallers/issues.'

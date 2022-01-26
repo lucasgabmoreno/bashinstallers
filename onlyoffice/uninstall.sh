@@ -22,9 +22,8 @@ sudo rm -rf ~/.local/share/applications/Desktopeditors* 2> /dev/null
 if ([ "$1" != "noremove" ] && [ ! -f .noremove ]); then rm -rf uninstall.sh; fi
 
 # Final message
-APP_PATH="/usr/share/applications/onlyoffice-desktopeditors.desktop"
-if [ ! -e $APP_PATH ]; then 
+if [[ $(sudo apt list onlyoffice*  2> /dev/null) != *"onlyoffice"* ]]; then
 echo "OnlyOffice uninstalled!"
 else
-echo 'ERROR!!! Please copy the error message and paste them into https://github.com/lucasgabmoreno/bashinstallers/issues.'
+echo 'ERROR!!! Please copy the error message and paste them into https://github.com/lucasgabmoreno/bashinstallers/issues'
 fi

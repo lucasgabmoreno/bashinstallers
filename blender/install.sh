@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# Functions
+chmodown() {
+sudo chmod +x "$1"
+sudo chown $USER:$USER "$1"
+}
+
 # Start count
 START_TIME=`date +%s` 
 
@@ -8,8 +14,10 @@ bash uninstall.sh noremove
 
 # Install
 BLENDER="blender-3.0.0-linux-x64.tar.xz"
+DOWN_PATH="https://download.blender.org/release/Blender3.0/$BLENDER"
 BLENDER_PATH=~/blender
-sudo wget -t inf "https://download.blender.org/release/Blender3.0/$BLENDER"
+sudo wget -t inf "$DOWN_PATH"
+if [ ! -f "$BLENDER" ]; then curl -L -O "$DOWN_PATH"; fi
 sudo mkdir "$BLENDER_PATH"
 sudo tar -Jxf "$BLENDER" --strip-components=1 -C "$BLENDER_PATH"
 sudo rm -rf "$BLENDER"
@@ -18,10 +26,6 @@ sudo rm -rf "$BLENDER"
 DESK_PATH=$(xdg-user-dir DESKTOP)
 USER_PATH=$(xdg-user-dir)
 APP_PATH=~/.local/share/applications/blender.desktop
-chmodown() {
-sudo chmod +x "$1"
-sudo chown $USER:$USER "$1"
-}
 sudo sed -i "s|Exec=blender|Exec=$USER_PATH/blender/blender|g" "$BLENDER_PATH/blender.desktop"
 chmodown "$BLENDER_PATH/blender.desktop"
 sudo cp "$BLENDER_PATH/blender.desktop" ~/.local/share/applications/

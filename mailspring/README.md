@@ -1,4 +1,4 @@
-# Mailspring 1.9.2
+# Mailspring
 <img src="preview.svg" width="200">
 
 ## Install:

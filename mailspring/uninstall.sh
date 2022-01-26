@@ -20,8 +20,7 @@ sudo rm -rf /tmp/Mailspring* 2> /dev/null
 if ([ "$1" != "noremove" ] && [ ! -f .noremove ]); then rm -rf uninstall.sh; fi
 
 # Final message
-APP_PATH="/usr/share/applications/Mailspring.desktop"
-if [ ! -e $APP_PATH ]; then 
+if [[ $(sudo apt list mailspring*  2> /dev/null) != *"mailspring"* ]]; then 
 echo "Mailspring uninstalled!"
 else
 echo 'ERROR!!! Please copy the error message and paste them into https://github.com/lucasgabmoreno/bashinstallers/issues.'

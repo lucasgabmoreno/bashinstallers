@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# Functions
+chmodown() {
+sudo chmod +x "$1"
+sudo chown $USER:$USER "$1"
+}
+
 # Start count
 START_TIME=`date +%s` 
 
@@ -11,9 +17,7 @@ VERSION="FreeFileSync_11.16"
 FREEFILESYNC=$VERSION"_Linux.tar.gz"
 FREEFILESYNC_RUN=$VERSION"_Install.run"
 sudo wget -t inf "https://freefilesync.org/download/$FREEFILESYNC"
-if [ ! -f "$FREEFILESYNC" ]; then
-    curl -O "https://freefilesync.org/download/$FREEFILESYNC"
-fi
+if [ ! -f "$FREEFILESYNC" ]; then curl -L -O "https://freefilesync.org/download/$FREEFILESYNC"; fi
 sudo tar -xf "$FREEFILESYNC"
 sudo chmod +x "$FREEFILESYNC_RUN"
 sudo ./$FREEFILESYNC_RUN
@@ -25,10 +29,6 @@ sudo apt --fix-broken install -y
 # Create desktop launcher
 DESK_PATH=$(xdg-user-dir DESKTOP)
 DESK_TRUE=0
-chmodown() {
-sudo chmod +x "$1"
-sudo chown $USER:$USER "$1"
-}
 if [ -e "$DESK_PATH/FreeFileSync.desktop" ]; then DESK_TRUE=1; fi
 if [ "$DESK_TRUE" == 1 ]; then
 sudo rm -rf "$DESK_PATH/FreeFileSync.desktop"

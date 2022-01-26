@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# Functions
+chmodown() {
+sudo chmod +x "$1"
+sudo chown $USER:$USER "$1"
+}
+
 # Start count
 START_TIME=`date +%s` 
 
@@ -23,8 +29,8 @@ APP_PATH="/usr/share/applications/JDownloader 2-0.desktop"
 APP_PATH2="/usr/share/applications/JDownloader 2 Update & Rescue-0.desktop"
 sudo sed -i 's|Icon=/opt/jd2/.install4j/JDownloader2.png|Icon=jdownloader|g' "$APP_PATH"
 sudo sed -i 's|Icon=/opt/jd2/.install4j/JDownloader2Update.png|Icon=jdownloader|g' "$APP_PATH2"
-sudo chown $USER:$USER "$APP_PATH"
-sudo chown $USER:$USER "$APP_PATH2"
+chmodown "$APP_PATH"
+chmodown "$APP_PATH2"
 APP_PATH_STR=$(paste "$APP_PATH")
 if [[ "$APP_PATH_STR" != *"StartupWMClass"* ]]; then
 sudo echo "StartupWMClass=JDownloader" >> "$APP_PATH"
@@ -32,8 +38,7 @@ sudo echo "StartupWMClass=JDownloader" >> "$APP_PATH2"
 fi
 sudo cp "/opt/jd2/.install4j/JDownloader2.png" /usr/share/icons/jdownloader.png
 sudo cp "$APP_PATH" "$DESK_PATH/"
-sudo chmod +x "$DESK_PATH/"JDownloader\ 2-0.desktop
-sudo chown $USER:$USER "$DESK_PATH/"JDownloader\ 2-0.desktop
+chmodown "$DESK_PATH/"JDownloader\ 2-0.desktop
 
 # Remove this insaller
 if [ ! -f .noremove ]; then rm -rf install.sh uninstall.sh; fi

@@ -1,4 +1,4 @@
-# OnlyOffice 6.4.2.6
+# OnlyOffice
 <img src="preview.svg" width="200">
 
 ## Install OnlyOffice:
