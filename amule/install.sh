@@ -47,13 +47,6 @@ sudo apt-get install amule-emc -y
 # Final fixes
 sudo apt --fix-broken install -y
 
-# Create desktop launcher
-DESK_PATH=$(xdg-user-dir DESKTOP)
-APP_PATH="/usr/share/applications/amule.desktop"
-chmodown "$APP_PATH"
-cp "$APP_PATH" "$DESK_PATH/"
-chmodown "$DESK_PATH/amule.desktop"
-
 # Remove this insaller
 if [ ! -f .noremove ]; then rm -rf install.sh uninstall.sh; fi
 

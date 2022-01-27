@@ -25,7 +25,7 @@ sudo rm -rf "$DESK_PATH/amule.desktop" 2> /dev/null
 if ([ "$1" != "noremove" ] && [ ! -f .noremove ]); then rm -rf uninstall.sh; fi
 
 # Final message
-if [[ $(sudo apt list amule*  2> /dev/null) != *"amule"* ]]; then 
+if [[ $(sudo apt list --installed amule*  2> /dev/null) != *"amule"* ]]; then 
 echo "aMule uninstalled!"
 else
 echo 'ERROR!!! Please copy the error message and paste them into https://github.com/lucasgabmoreno/bashinstallers/issues.'
