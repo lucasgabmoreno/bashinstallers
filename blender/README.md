@@ -1,6 +1,9 @@
 # Blender 3.0
 <img src="preview.svg" width="200">
 
+## Works on:
+* Linux Mint
+
 ## Install:
 ```
 GIT="https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/blender/" && sudo wget "$GIT"install.sh "$GIT"uninstall.sh && bash install.sh
