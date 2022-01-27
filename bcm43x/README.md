@@ -1,6 +1,9 @@
 # Broadcom BCM43x
 <img src="preview.svg" width="200">
 
+## Works on:
+* Linux Mint
+
 ## Install
 ```
 GIT="https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/bcm43x/" && sudo wget "$GIT"install.sh "$GIT"uninstall.sh && bash install.sh
@@ -10,8 +13,6 @@ GIT="https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/bcm43x
 ```
 sudo wget https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/bcm43x/uninstall.sh && bash uninstall.sh
 ```
-## Works on:
-* Linux Mint
 
 ## Hardware supported:
 * BCM43142
