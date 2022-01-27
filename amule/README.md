@@ -1,6 +1,10 @@
 # aMule 2.3.2
 <img src="preview.svg" width="200">
 
+## Works on:
+* Linux Mint
+* Ubuntu
+
 ## Install
 ```
 GIT="https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/amule/" && sudo wget "$GIT"install.sh "$GIT"uninstall.sh && bash install.sh
@@ -10,9 +14,6 @@ GIT="https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/amule/
 ```
 sudo wget https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/amule/uninstall.sh && bash uninstall.sh
 ```
-## Works on:
-* Linux Mint
-* Ubuntu
 
 ## Software installed:
 * libcrypto++6
