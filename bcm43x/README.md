@@ -10,6 +10,9 @@ GIT="https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/bcm43x
 ```
 sudo wget https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/bcm43x/uninstall.sh && bash uninstall.sh
 ```
+## Works on:
+* Linux Mint
+
 ## Hardware supported:
 * BCM43142
 * BCM43331

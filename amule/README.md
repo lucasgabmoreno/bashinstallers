@@ -10,6 +10,10 @@ GIT="https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/amule/
 ```
 sudo wget https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/amule/uninstall.sh && bash uninstall.sh
 ```
+## Works on:
+* Linux Mint
+* Ubuntu
+
 ## Software installed:
 * libcrypto++6
 * amule-common

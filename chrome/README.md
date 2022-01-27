@@ -1,6 +1,10 @@
 # Google Chrome
 <img src="preview.svg" width="200">
 
+## Works on:
+* Linux Mint
+* Ubuntu
+
 ## Install:
 ```
 GIT="https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/chrome/" && sudo wget "$GIT"install.sh "$GIT"uninstall.sh && bash install.sh
@@ -13,9 +17,6 @@ sudo wget https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/c
 
 ## Software installed:
 * google-chrome-stable
-
-## Also works on:
-* Ubuntu
 
 ## Thanks:
 * [Google](https://www.google.com/intl/es-419/chrome/)
