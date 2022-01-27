@@ -51,8 +51,9 @@ sudo apt --fix-broken install -y
 if [ ! -f .noremove ]; then rm -rf install.sh uninstall.sh; fi
 
 # Final message
-if [[ $(sudo apt list --installed amule*  2> /dev/null) == *"amule"* ]]; then 
+if [[ $(sudo apt list --installed amule*  2> /dev/null) == *"amule/"* ]]; then 
 sudo echo 'aMule installed in '$(date -d @$((`date +%s`-$START_TIME)) -u +%H:%M:%S)
 else
+bash uninstall.sh noremove
 echo 'ERROR!!! Please copy the error message and paste them into https://github.com/lucasgabmoreno/bashinstallers/issues'
 fi
