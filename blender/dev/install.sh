@@ -15,7 +15,7 @@ bash uninstall.sh noremove
 # Install
 BLENDER="blender-3.0.0-linux-x64.tar.xz"
 DOWN_PATH="https://download.blender.org/release/Blender3.0/$BLENDER"
-BLENDER_PATH=~/blender
+if [ -e "~/.local/share/" ]; then BLENDER_PATH=~/blender; else BLENDER_PATH="/opt/blender"; fi
 sudo wget -t inf "$DOWN_PATH"
 if [ ! -f "$BLENDER" ]; then curl -L -O "$DOWN_PATH"; fi
 sudo mkdir "$BLENDER_PATH"
@@ -23,16 +23,23 @@ sudo tar -Jxf "$BLENDER" --strip-components=1 -C "$BLENDER_PATH"
 sudo rm -rf "$BLENDER"
 
 # Create desktop launcher
-DESK_PATH=$(xdg-user-dir DESKTOP)
-USER_PATH=$(xdg-user-dir)
-APP_PATH=~/.local/share/applications/blender.desktop
+if [ -e "~/.local/share/" ]; then 
+	USER_PATH=$(xdg-user-dir)
+	APP_PATH=~/.local/share/applications/blender.desktop
+else
+	USER_PATH='/opt'
+	APP_PATH="/usr/share/applications/blender.desktop"
+fi
 sudo sed -i "s|Exec=blender|Exec=$USER_PATH/blender/blender|g" "$BLENDER_PATH/blender.desktop"
 chmodown "$BLENDER_PATH/blender.desktop"
-sudo cp "$BLENDER_PATH/blender.desktop" ~/.local/share/applications/
-sudo cp "$BLENDER_PATH/blender.svg" ~/.local/share/icons/
+if [ -e "~/.local/share/" ]; then 
+	sudo cp "$BLENDER_PATH/blender.desktop" ~/.local/share/applications/
+	sudo cp "$BLENDER_PATH/blender.svg" ~/.local/share/icons/
+else
+	sudo cp "$BLENDER_PATH/blender.desktop" /usr/share/applications/
+	sudo cp "$BLENDER_PATH/blender.svg" /usr/share/icons/
+fi
 chmodown "$APP_PATH"
-cp $APP_PATH "$DESK_PATH/"
-chmodown "$DESK_PATH/blender.desktop"
 
 # Remove this insaller
 if [ ! -f .noremove ]; then rm -rf install.sh uninstall.sh; fi
