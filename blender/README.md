@@ -4,7 +4,7 @@
 ## Works on:
 * Linux Mint
 * Ubuntu
-* Chrome OS (Debian)
+* Chrome OS / Debian
 
 ## Install:
 ```
