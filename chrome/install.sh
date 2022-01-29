@@ -36,7 +36,7 @@ chmodown "$APP_PATH"
 if [ ! -f .noremove ]; then rm -rf install.sh uninstall.sh; fi
 
 # Final message
-if [[ $(sudo apt list--installed google-chrome*  2> /dev/null) == *"google-chrome"* ]]; then 
+if [[ $(sudo apt list --installed google-chrome*  2> /dev/null) == *"google-chrome"* ]]; then 
 sudo echo 'Google Chrome installed in '$(date -d @$((`date +%s`-$START_TIME)) -u +%H:%M:%S)
 else
 echo 'ERROR!!! Please copy the error message and paste them into https://github.com/lucasgabmoreno/bashinstallers/issues.'
