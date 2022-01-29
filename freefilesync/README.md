@@ -1,12 +1,17 @@
 # FreeFileSync
 <img src="preview.svg" width="200">
 
+## Works on:
+* Linux Mint
+* Ubuntu
+* Chrome OS / Debian
+
 ## Install:
 ```
 GIT="https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/freefilesync/" && sudo wget "$GIT"install.sh "$GIT"uninstall.sh && bash install.sh
 ```
-Install on /opt/FreeFileSync or /home/username/FreeFileSync default folders.<br> 
-If you need to change them, you must download and modify [install.sh](install.sh) and [uninstall.sh](uninstall.sh).
+Keep on /opt/FreeFileSync or /home/username/FreeFileSync default folders.<br> 
+
 
 ## Uninstall:
 ```
