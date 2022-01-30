@@ -15,7 +15,7 @@ sudo rm -rf "$DESK_PATH/org.inkscape.Inkscape.desktop" 2> /dev/null
 sudo rm -rf ~/.config/inkscape* 2> /dev/null
 
 # Final message
-if [[ $(sudo apt list inkscape*  2> /dev/null) != *"inkscape"* ]]; then 
+if [[ $(sudo apt list --installed inkscape*  2> /dev/null) != *"inkscape"* ]]; then 
 echo "Inkscape uninstalled!"
 else
 echo 'ERROR!!! Please copy the error message and paste them into https://github.com/lucasgabmoreno/bashinstallers/issues.'

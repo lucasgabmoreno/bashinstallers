@@ -21,14 +21,11 @@ sudo apt install inkscape -y
 sudo apt --fix-broken install -y
 
 # Create desktop launcher
-DESK_PATH=$(xdg-user-dir DESKTOP)
 APP_PATH=/usr/share/applications/org.inkscape.Inkscape.desktop
 chmodown "$APP_PATH"
-cp "$APP_PATH" "$DESK_PATH/"   
-chmodown "$DESK_PATH/org.inkscape.Inkscape.desktop"
 
 # Final message
-if [[ $(sudo apt list inkscape*  2> /dev/null) == *"inkscape"* ]]; then 
+if [[ $(sudo apt list --installed inkscape*  2> /dev/null) == *"inkscape"* ]]; then 
 sudo echo 'Inkscape installed in '$(date -d @$((`date +%s`-$START_TIME)) -u +%H:%M:%S)
 else
 echo 'ERROR!!! Please copy the error message and paste them into https://github.com/lucasgabmoreno/bashinstallers/issues.'
