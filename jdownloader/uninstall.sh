@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# Functions
+chmodown() {
+sudo chmod +x "$1"
+sudo chown $USER:$USER "$1"
+}
+
 # Uninstall
 sudo flatpak uninstall org.jdownloader.JDownloader* -y 2> /dev/null
 sudo bash "/opt/jd2/Uninstall JDownloader" 2> /dev/null
@@ -13,7 +19,10 @@ sudo rm -rf /opt/jd2* 2> /dev/null
 sudo rm -rf /tmp/JDownloader** 2> /dev/null
 
 # Remove this uninstaller
-if ([ "$1" != "noremove" ] && [ ! -f .noremove ]); then rm -rf uninstall.sh; fi
+if ([ "$1" != "noremove" ] && [ ! -f .noremove ]); then
+chmodown uninstall.sh
+rm -rf uninstall.sh
+; fi
 
 # Final message
 APP_PATH="/usr/share/applications/JDownloader 2-0.desktop"

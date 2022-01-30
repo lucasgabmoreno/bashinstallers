@@ -38,7 +38,11 @@ fi
 sudo cp "/opt/jd2/.install4j/JDownloader2.png" /usr/share/icons/jdownloader.png
 
 # Remove this insaller
-if [ ! -f .noremove ]; then rm -rf install.sh uninstall.sh; fi
+if [ ! -f .noremove ]; then 
+chmodown install.sh
+chmodown uninstall.sh
+rm -rf install.sh uninstall.sh
+fi
 
 # Final message
 if [ -e "$APP_PATH" ]; then 
