@@ -5,8 +5,7 @@
 ```
 GIT="https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/jdownloader/" && sudo wget "$GIT"install.sh "$GIT"uninstall.sh && bash install.sh
 ```
-Install on /opt/jd2 default folder.<br> 
-If you need to change, you must download and modify [install.sh](install.sh) and [uninstall.sh](uninstall.sh).
+Keep on /opt/jd2 default folder.
 
 ## Uninstall Jdownloader:
 ```

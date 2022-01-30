@@ -1,6 +1,10 @@
 # Inkscape 1.1.1
 <img src="preview.svg" width="200">
 
+## Works on:
+* Linux Mint
+* Ubuntu
+
 ## Install Inkscape:
 ```
 GIT="https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/inkscape/" && sudo wget "$GIT"install.sh "$GIT"uninstall.sh && bash install.sh
