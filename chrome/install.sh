@@ -33,7 +33,9 @@ APP_PATH="/usr/share/applications/google-chrome.desktop"
 chmodown "$APP_PATH"
 
 # Remove this insaller
-if [ ! -f .noremove ]; then rm -rf install.sh uninstall.sh; fi
+if [ ! -f .noremove ]; then 
+    sudo rm -rf install.sh uninstall.sh
+fi
 
 # Final message
 if [[ $(sudo apt list --installed google-chrome*  2> /dev/null) == *"google-chrome"* ]]; then 

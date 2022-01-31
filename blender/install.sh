@@ -25,7 +25,7 @@ else
     PREFIX_PATH='/usr'
 fi
 sudo wget -t inf "$DOWN_PATH"
-if [ ! -f "$BLENDER" ]; then curl -L -O "$DOWN_PATH"; fi
+if [ ! -f "$BLENDER" ]; then sudo curl -L -O "$DOWN_PATH"; fi
 sudo mkdir "$BLENDER_PATH"
 sudo tar -Jxf "$BLENDER" --strip-components=1 -C "$BLENDER_PATH"
 sudo rm -rf "$BLENDER"
@@ -39,7 +39,9 @@ sudo cp "$BLENDER_PATH/blender.svg" $PREFIX_PATH/share/icons/
 chmodown "$APP_PATH"
 
 # Remove this insaller
-if [ ! -f .noremove ]; then rm -rf install.sh uninstall.sh; fi
+if [ ! -f .noremove ]; then 
+    sudo rm -rf install.sh uninstall.sh
+fi
 
 # Final message
 if [ -e $APP_PATH ]; then 

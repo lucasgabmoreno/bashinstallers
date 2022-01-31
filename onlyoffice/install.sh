@@ -31,9 +31,9 @@ FROM_PATH="/usr/share/applications/onlyoffice-desktopeditors.desktop"
 chmodown "$FROM_PATH" 
 FROM_PATH_STR=$(paste $FROM_PATH)
 if [[ "$FROM_PATH_STR" != *"StartupWMClass"* ]]; then
-sudo sed '2 i StartupWMClass=DesktopEditors' "$FROM_PATH" >> onlyoffice-desktopeditors.desktop
-sudo rm -rf "$FROM_PATH"
-sudo mv onlyoffice-desktopeditors.desktop /usr/share/applications/
+    sudo sed '2 i StartupWMClass=DesktopEditors' "$FROM_PATH" >> onlyoffice-desktopeditors.desktop
+    sudo rm -rf "$FROM_PATH"
+    sudo mv onlyoffice-desktopeditors.desktop /usr/share/applications/
 fi
 DESK_PATH=$(xdg-user-dir DESKTOP)
 sudo cp "$FROM_PATH" "$DESK_PATH/"
@@ -43,12 +43,14 @@ chmodown "$DESK_PATH/onlyoffice-desktopeditors.desktop"
 sudo rm -rf ~/.local/share/applications/Desktopeditors* 2> /dev/null
 
 # Remove this insaller
-if [ ! -f .noremove ]; then rm -rf install.sh uninstall.sh; fi
+if [ ! -f .noremove ]; then 
+    sudo rm -rf install.sh uninstall.sh
+fi
 
 # Final message
 if [[ $(sudo apt list onlyoffice*  2> /dev/null) == *"onlyoffice"* ]]; then 
-sudo echo 'OnlyOffice installed in '$(date -d @$((`date +%s`-$START_TIME)) -u +%H:%M:%S)
+    sudo echo 'OnlyOffice installed in '$(date -d @$((`date +%s`-$START_TIME)) -u +%H:%M:%S)
 else
-echo 'ERROR!!! Please copy the error message and paste them into https://github.com/lucasgabmoreno/bashinstallers/issues'
+    echo 'ERROR!!! Please copy the error message and paste them into https://github.com/lucasgabmoreno/bashinstallers/issues'
 fi
 

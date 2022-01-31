@@ -48,7 +48,9 @@ sudo apt-get install amule-emc -y
 sudo apt --fix-broken install -y
 
 # Remove this insaller
-if [ ! -f .noremove ]; then rm -rf install.sh uninstall.sh; fi
+if [ ! -f .noremove ]; then 
+    sudo rm -rf install.sh uninstall.sh
+fi
 
 # Final message
 if [[ $(sudo apt list --installed amule*  2> /dev/null) == *"amule/"* ]]; then 

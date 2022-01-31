@@ -14,6 +14,11 @@ DESK_PATH=$(xdg-user-dir DESKTOP)
 sudo rm -rf "$DESK_PATH/org.inkscape.Inkscape.desktop" 2> /dev/null
 sudo rm -rf ~/.config/inkscape* 2> /dev/null
 
+# Remove this uninstaller
+if ([ "$1" != "noremove" ] && [ ! -f .noremove ]); then
+    sudo rm -rf uninstall.sh
+fi
+
 # Final message
 if [[ $(sudo apt list --installed inkscape*  2> /dev/null) != *"inkscape"* ]]; then 
 echo "Inkscape uninstalled!"

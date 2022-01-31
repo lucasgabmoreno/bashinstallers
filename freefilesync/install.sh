@@ -54,7 +54,9 @@ sudo cp /opt/FreeFileSync/Resources/RealTimeSync.png /usr/share/icons/realtimesy
 fi
 
 # Remove this insaller
-if [ ! -f .noremove ]; then rm -rf install.sh uninstall.sh; fi
+if [ ! -f .noremove ]; then 
+    sudo rm -rf install.sh uninstall.sh
+fi
 
 # Final message
 if [ -e $APP_PATH ]; then 

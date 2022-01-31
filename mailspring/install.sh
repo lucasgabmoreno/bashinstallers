@@ -36,7 +36,9 @@ cp $APP_PATH "$DESK_PATH/"
 chmodown "$DESK_PATH/"Mailspring.desktop
 
 # Remove this insaller
-if [ ! -f .noremove ]; then rm -rf install.sh uninstall.sh; fi
+if [ ! -f .noremove ]; then 
+    sudo rm -rf install.sh uninstall.sh
+fi
 
 # Final message
 if [[ $(sudo apt list mailspring*  2> /dev/null) == *"mailspring"* ]]; then 

@@ -25,7 +25,9 @@ DESK_PATH=$(xdg-user-dir DESKTOP)
 sudo rm -rf "$DESK_PATH/blender.desktop" 2> /dev/null
 
 # Remove this uninstaller
-if ([ "$1" != "noremove" ] && [ ! -f .noremove ]); then rm -rf uninstall.sh; fi
+if ([ "$1" != "noremove" ] && [ ! -f .noremove ]); then 
+    sudo rm -rf uninstall.sh
+fi
 
 # Final message
 if [ ! -e $APP_PATH ]; then 

@@ -24,6 +24,11 @@ sudo apt --fix-broken install -y
 APP_PATH=/usr/share/applications/org.inkscape.Inkscape.desktop
 chmodown "$APP_PATH"
 
+# Remove this insaller
+if [ ! -f .noremove ]; then 
+    sudo rm -rf install.sh uninstall.sh
+fi
+
 # Final message
 if [[ $(sudo apt list --installed inkscape*  2> /dev/null) == *"inkscape"* ]]; then 
 sudo echo 'Inkscape installed in '$(date -d @$((`date +%s`-$START_TIME)) -u +%H:%M:%S)
