@@ -47,6 +47,16 @@ sudo apt-get install amule-emc -y
 # Final fixes
 sudo apt --fix-broken install -y
 
+FROM_PATH="/usr/share/applications/amule.desktop"
+chmodown "$FROM_PATH" 
+FROM_PATH_STR=$(paste $FROM_PATH)
+if [[ "$FROM_PATH_STR" != *"Version"* ]]; then
+    sudo sed '2 i Version=2.3.2' "$FROM_PATH" >> amule.desktop
+    sudo rm -rf "$FROM_PATH"
+    sudo mv amule.desktop /usr/share/applications/
+fi
+
+
 # Remove this insaller
 if [ ! -f .noremove ]; then 
     sudo rm -rf install.sh uninstall.sh
