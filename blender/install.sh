@@ -13,6 +13,8 @@ START_TIME=`date +%s`
 bash uninstall.sh noremove
 
 # Install
+sudo wget -t inf "https://github.com/lucasgabmoreno/bashinstallers/raw/main/blender/blender.png"
+sudo mv "blender.png" "/usr/share/icons/hicolor/128x128/apps/"
 BLENDER="blender-3.0.0-linux-x64.tar.xz"
 DOWN_PATH="https://download.blender.org/release/Blender3.0/$BLENDER"
 if [ -e ~/.local/share/ ]; then 

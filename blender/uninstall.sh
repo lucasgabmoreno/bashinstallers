@@ -4,12 +4,14 @@
 kill $(pidof blender) 2> /dev/null
 
 # Uninstall
+
 sudo apt remove blender* -y 2> /dev/null
 sudo apt purge blender* -y 2> /dev/null
 sudo apt autoremove -y 2> /dev/null
 sudo flatpak uninstall org.blender.Blender* -y 2> /dev/null
 
 # Remove trash
+sudo rm -rf "/usr/share/icons/hicolor/128x128/apps/blender.png"
 if [ -e ~/.local/share/ ]; then 
 	APP_PATH=~/.local/share/applications/blender.desktop
 else 
