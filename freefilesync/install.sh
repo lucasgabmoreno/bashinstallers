@@ -5,6 +5,11 @@ chmodown() {
 sudo chmod +x "$1"
 sudo chown $USER:$USER "$1"
 }
+mkdir_p() {
+if [ ! -e $1 ]; then
+    sudo mkdir -p $1
+fi
+}
 
 if [ $USER == "root" ]; then
 echo "Don't run this bash file as root user"
@@ -17,6 +22,12 @@ START_TIME=`date +%s`
 bash uninstall.sh noremove
 
 # Install
+sudo wget -t inf "https://github.com/lucasgabmoreno/bashinstallers/raw/main/freefilesync/freefilesync.png"
+sudo wget -t inf "https://github.com/lucasgabmoreno/bashinstallers/raw/main/freefilesync/realtimesync.png"
+sudo cp "freefilesync.png" "/usr/share/icons/hicolor/128x128/apps/"
+sudo cp "realtimesync.png" "/usr/share/icons/hicolor/128x128/apps/"
+mkdir_p ~/.local/share/applications/
+mkdir_p ~/.local/share/icons/
 VERSION="11.16"
 FREEFILESYNC="FreeFileSync_"$VERSION"_Linux.tar.gz"
 FREEFILESYNC_RUN="FreeFileSync_"$VERSION"_Install.run"
