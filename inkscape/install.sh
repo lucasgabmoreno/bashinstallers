@@ -1,5 +1,9 @@
 #!/bin/bash
 
+if [ $USER == "root" ]; then
+echo "Don't run this bash file as root user"
+else
+
 # Functions
 chmodown() {
 sudo chmod +x "$1"
@@ -36,3 +40,4 @@ else
 echo 'ERROR!!! Please copy the error message and paste them into https://github.com/lucasgabmoreno/bashinstallers/issues.'
 fi
 
+fi

@@ -1,5 +1,9 @@
 #!/bin/bash
 
+if [ $USER == "root" ]; then
+echo "Don't run this bash file as root user"
+else
+
 # Close
 kill $(pidof chrome) 2> /dev/null
 
@@ -23,4 +27,6 @@ if [[ $(sudo apt list --installed google-chrome*  2> /dev/null) != *"google-chro
 echo "Google Chrome uninstalled!"
 else
 echo 'ERROR!!! Please copy the error message and paste them into https://github.com/lucasgabmoreno/bashinstallers/issues.'
+fi
+
 fi

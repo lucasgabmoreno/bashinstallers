@@ -1,5 +1,9 @@
 #!/bin/bash
 
+if [ $USER == "root" ]; then
+echo "Don't run this bash file as root user"
+else
+
 # Close
 kill $(pidof DesktopEditors) 2> /dev/null
 
@@ -28,4 +32,6 @@ if [[ $(sudo apt list onlyoffice*  2> /dev/null) != *"onlyoffice"* ]]; then
     echo "OnlyOffice uninstalled!"
 else
     echo 'ERROR!!! Please copy the error message and paste them into https://github.com/lucasgabmoreno/bashinstallers/issues'
+fi
+
 fi

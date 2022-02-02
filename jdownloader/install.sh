@@ -6,6 +6,10 @@ sudo chmod +x "$1"
 sudo chown $USER:$USER "$1"
 }
 
+if [ $USER == "root" ]; then
+echo "Don't run this bash file as root user"
+else
+
 # Start count
 START_TIME=`date +%s` 
 
@@ -47,5 +51,7 @@ if [ -e "$APP_PATH" ]; then
 sudo echo 'JDownloader  installed in '$(date -d @$((`date +%s`-$START_TIME)) -u +%H:%M:%S)
 else
 echo 'ERROR!!! Please copy the error message and paste them into https://github.com/lucasgabmoreno/bashinstallers/issues.'
+fi
+
 fi
 

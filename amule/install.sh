@@ -14,6 +14,10 @@ sudo dpkg -i inst.deb
 sudo rm -rf inst.deb
 }
 
+if [ $USER == "root" ]; then
+echo "Don't run this bash file as root user"
+else
+
 # Start count
 START_TIME=`date +%s` 
 
@@ -67,4 +71,6 @@ if [[ $(sudo apt list --installed amule*  2> /dev/null) == *"amule/"* ]]; then
 sudo echo 'aMule installed in '$(date -d @$((`date +%s`-$START_TIME)) -u +%H:%M:%S)
 else
 echo 'ERROR!!! Please copy the error message and paste them into https://github.com/lucasgabmoreno/bashinstallers/issues'
+fi
+
 fi

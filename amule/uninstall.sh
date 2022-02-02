@@ -1,5 +1,9 @@
 #!/bin/bash
 
+if [ $USER == "root" ]; then
+echo "Don't run this bash file as root user"
+else
+
 # Close
 kill $(pidof amule) 2> /dev/null
 
@@ -31,4 +35,6 @@ if [[ $(sudo apt list --installed amule*  2> /dev/null) != *"amule"* ]]; then
 echo "aMule uninstalled!"
 else
 echo 'ERROR!!! Please copy the error message and paste them into https://github.com/lucasgabmoreno/bashinstallers/issues.'
+fi
+
 fi

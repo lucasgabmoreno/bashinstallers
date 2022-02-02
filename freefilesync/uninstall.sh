@@ -1,5 +1,9 @@
 #!/bin/bash
 
+if [ $USER == "root" ]; then
+echo "Don't run this bash file as root user"
+else
+
 # Close
 kill $(pidof FreeFileSync) 2> /dev/null
 kill $(pidof FreeFileSync_x86_64) 2> /dev/null
@@ -45,4 +49,6 @@ if [ ! -e ~/.local/share/applications/FreeFileSync.desktop ] && [ ! -e /usr/shar
 echo "FreeFileSync uninstalled!"
 else
 echo 'ERROR!!! Please copy the error message and paste them into https://github.com/lucasgabmoreno/bashinstallers/issues.'
+fi
+
 fi

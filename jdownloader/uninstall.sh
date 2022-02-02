@@ -1,5 +1,9 @@
 #!/bin/bash
 
+if [ $USER == "root" ]; then
+echo "Don't run this bash file as root user"
+else
+
 # Uninstall
 sudo flatpak uninstall org.jdownloader.JDownloader* -y 2> /dev/null
 sudo bash "/opt/jd2/Uninstall JDownloader" 2> /dev/null
@@ -23,4 +27,6 @@ if [ ! -e "$APP_PATH" ]; then
 echo "JDownloader uninstalled!"
 else
 echo 'ERROR!!! Please copy the error message and paste them into https://github.com/lucasgabmoreno/bashinstallers/issues.'
+fi
+
 fi

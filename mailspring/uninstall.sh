@@ -1,5 +1,9 @@
 #!/bin/bash
 
+if [ $USER == "root" ]; then
+echo "Don't run this bash file as root user"
+else
+
 # Close
 kill $(pidof mailspring) 2> /dev/null
 
@@ -26,4 +30,6 @@ if [[ $(sudo apt list mailspring*  2> /dev/null) != *"mailspring"* ]]; then
 echo "Mailspring uninstalled!"
 else
 echo 'ERROR!!! Please copy the error message and paste them into https://github.com/lucasgabmoreno/bashinstallers/issues.'
+fi
+
 fi
