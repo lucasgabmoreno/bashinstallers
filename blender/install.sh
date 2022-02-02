@@ -5,6 +5,15 @@ chmodown() {
 sudo chmod +x "$1"
 sudo chown $USER:$USER "$1"
 }
+mkdir_p() {
+if [ ! -e $1 ]; then
+    sudo mkdir -p $1
+fi
+}
+
+if [ $USER == "root" ]; then
+echo "Don't run this bash file as root user"
+else
 
 # Start count
 START_TIME=`date +%s` 
@@ -17,28 +26,27 @@ sudo wget -t inf "https://github.com/lucasgabmoreno/bashinstallers/raw/main/blen
 sudo mv "blender.png" "/usr/share/icons/hicolor/128x128/apps/"
 BLENDER="blender-3.0.0-linux-x64.tar.xz"
 DOWN_PATH="https://download.blender.org/release/Blender3.0/$BLENDER"
-if [ -e ~/.local/share/ ]; then 
-    BLENDER_PATH=~/blender 
-    USER_PATH=$(xdg-user-dir)
-    PREFIX_PATH=~/.local
-else 
-    BLENDER_PATH="/opt/blender"
-    USER_PATH='/opt'
-    PREFIX_PATH='/usr'
-fi
+
+mkdir_p ~/.local/share/applications/
+mkdir_p ~/.local/share/icons/
+
+USER_PATH=$(xdg-user-dir)
 sudo wget -t inf "$DOWN_PATH"
-if [ ! -f "$BLENDER" ]; then sudo curl -L -O "$DOWN_PATH"; fi
-sudo mkdir "$BLENDER_PATH"
-sudo tar -Jxf "$BLENDER" --strip-components=1 -C "$BLENDER_PATH"
+
+if [ ! -f "$BLENDER" ]; then
+    sudo curl -L -O "$DOWN_PATH"
+fi
+
+sudo mkdir ~/blender 
+sudo tar -Jxf "$BLENDER" --strip-components=1 -C ~/blender 
 sudo rm -rf "$BLENDER"
 
 # Create desktop launcher
-APP_PATH=$PREFIX_PATH/share/applications/blender.desktop
-sudo sed -i "s|Exec=blender|Exec=$USER_PATH/blender/blender|g" "$BLENDER_PATH/blender.desktop"
-chmodown "$BLENDER_PATH/blender.desktop"
-sudo cp "$BLENDER_PATH/blender.desktop" $PREFIX_PATH/share/applications/
-sudo cp "$BLENDER_PATH/blender.svg" $PREFIX_PATH/share/icons/
-chmodown "$APP_PATH"
+sudo sed -i "s|Exec=blender|Exec=$USER_PATH/blender/blender|g" ~/blender/blender.desktop
+chmodown ~/blender/blender.desktop
+sudo cp ~/blender/blender.desktop ~/.local/share/applications/
+sudo cp ~/blender/blender.svg ~/.local/share/icons/
+chmodown ~/.local/share/applications/blender.desktop
 
 # Remove this insaller
 if [ ! -f .noremove ]; then 
@@ -51,3 +59,6 @@ sudo echo 'Blender installed in '$(date -d @$((`date +%s`-$START_TIME)) -u +%H:%
 else
 echo 'ERROR!!! Please copy the error message and paste them into https://github.com/lucasgabmoreno/bashinstallers/issues'
 fi
+
+fi
+
