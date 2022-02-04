@@ -28,14 +28,17 @@ sudo cp "freefilesync.png" "/usr/share/icons/hicolor/128x128/apps/"
 sudo cp "realtimesync.png" "/usr/share/icons/hicolor/128x128/apps/"
 mkdir_p ~/.local/share/applications/
 mkdir_p ~/.local/share/icons/
-VERSION="11.16"
+VERSION="11.17"
 FREEFILESYNC="FreeFileSync_"$VERSION"_Linux.tar.gz"
 FREEFILESYNC_RUN="FreeFileSync_"$VERSION"_Install.run"
+download_FFS() {
 sudo wget -t inf "https://freefilesync.org/download/$FREEFILESYNC"
-if [ ! -f "$FREEFILESYNC" ]; then curl -L -O "https://freefilesync.org/download/$FREEFILESYNC"; fi
 sudo tar -xf "$FREEFILESYNC"
 sudo chmod +x "$FREEFILESYNC_RUN"
 sudo ./$FREEFILESYNC_RUN
+}
+if [ ! -f "$FREEFILESYNC_RUN" ]; then download_FFS ; fi
+
 sudo rm -rf "$FREEFILESYNC_RUN" "$FREEFILESYNC"
 
 # Final fixes

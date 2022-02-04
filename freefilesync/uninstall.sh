@@ -18,6 +18,8 @@ sudo apt autoremove -y 2> /dev/null
 
 # Remove trash
 sudo rm -rf ~/.config/FreeFileSync* 2> /dev/null
+sudo rm -rf /usr/share/icons/hicolor/128x128/apps/freefilesync.png 2> /dev/null
+sudo rm -rf /usr/share/icons/hicolor/128x128/apps/realtimesync.png 2> /dev/null
 if [ -e ~/FreeFileSync/ ]; then 
     sudo rm -rf ~/.local/share/applications/FreeFileSync.desktop 2> /dev/null
     sudo rm -rf ~/.local/share/applications/RealTimeSync.desktop 2> /dev/null

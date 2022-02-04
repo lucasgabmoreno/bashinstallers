@@ -1,4 +1,4 @@
-# FreeFileSync
+# FreeFileSync 11.17
 <img src="preview.svg" width="200">
 
 ## Works on:
@@ -6,7 +6,7 @@
 * Ubuntu
 * Chrome OS / Debian
 
-## Install:
+## Install/Update:
 ```
 GIT="https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/freefilesync/" && sudo wget "$GIT"install.sh "$GIT"uninstall.sh && bash install.sh
 ```
