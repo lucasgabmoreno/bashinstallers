@@ -8,7 +8,7 @@ Easily install software for Linux Mint.
 * [Blender 3.0](blender)
 * [Broadcom BCM43x](bcm43x)
 * [Google Chrome](chrome)
-* [FreeFileSync 11.16](freefilesync)
+* [FreeFileSync](freefilesync)
 * [Inkscape 1.1](inkscape)
 * [JDownloader 2](jdownloader)
 * [Mailspring](mailspring)

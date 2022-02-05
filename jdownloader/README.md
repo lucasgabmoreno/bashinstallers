@@ -1,6 +1,10 @@
 # Jdownloader 2
 <img src="preview.svg" width="200">
 
+## Works on:
+* Linux Mint
+* Ubuntu
+
 ## Install Jdownloader:
 ```
 GIT="https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/jdownloader/" && sudo wget "$GIT"install.sh "$GIT"uninstall.sh && bash install.sh
