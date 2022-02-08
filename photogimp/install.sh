@@ -23,8 +23,8 @@ PHOTOGIMP="PhotoGIMP.by.Diolinux.v2020.for.Flatpak.zip"
 sudo wget -t inf "https://github.com/Diolinux/PhotoGIMP/releases/download/1.0/$PHOTOGIMP"
 sudo unzip "$PHOTOGIMP"
 sudo rm -rf "$PHOTOGIMP"
-sudo chmod 775 ~/.config
-sudo cp -R "PhotoGIMP by Diolinux v2020 for Flatpak/.var/app/org.gimp.GIMP/config/GIMP/2.10/"* ~/.config"/GIMP/2.10/"
+sudo mkdir -p ~/.config/GIMP/2.10
+sudo cp -R "PhotoGIMP by Diolinux v2020 for Flatpak/.var/app/org.gimp.GIMP/config/GIMP/2.10/"* ~/.config/GIMP/2.10/
 sudo rm -rf "PhotoGIMP by Diolinux v2020 for Flatpak"
 
 # Create desktop launcher
