@@ -27,8 +27,13 @@ sudo cp -R "PhotoGIMP by Diolinux v2020 for Flatpak/.var/app/org.gimp.GIMP/confi
 sudo rm -rf "PhotoGIMP by Diolinux v2020 for Flatpak"
 
 # Create desktop launcher
-
+sudo wget -t inf "https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/photogimp/photogimp.png"
+sudo cp "photogimp.png" "/usr/share/icons"
+sudo cp "photogimp.png" "/usr/share/icons/hicolor/128x128/apps"
+sudo rm -rf "photogimp.png"
 APP_PATH="/usr/share/applications/gimp.desktop"
+sudo sed -i "s|Name=GNU\ Image\ Manipulation\ Program|Name=PhotoGIMP|g" $APP_PATH
+sudo sed -i "s|Icon=gimp|Icon=photogimp|g" $APP_PATH
 chmodown "$APP_PATH"
 
 # Remove this insaller
