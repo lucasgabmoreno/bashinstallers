@@ -3,6 +3,8 @@
 
 ## Works on:
 * Linux Mint
+* Ubuntu
+* Chrome OS / Debian
 
 ## Install PhotoGIMP:
 ```
