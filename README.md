@@ -13,6 +13,7 @@ Easily install software for Linux Mint.
 * [JDownloader 2](jdownloader)
 * [Mailspring](mailspring)
 * [OnlyOffice](onlyoffice)
+* [PhotoGIMP](photogimp)
 
 ## Thanks:
 * [Papirus](https://github.com/PapirusDevelopmentTeam)
