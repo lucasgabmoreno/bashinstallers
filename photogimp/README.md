@@ -16,7 +16,8 @@ sudo wget https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/p
 ```
 
 ## Software installed:
-* inkscape
+* gimp
+* Dionlinux's PhotoGIMP patch 
 
 ## Thanks:
 * [Diolinux](https://github.com/Diolinux/PhotoGIMP)
