@@ -4,13 +4,13 @@
 ## Works on:
 * Linux Mint
 
-## Install Inkscape:
+## Install PhotoGIMP:
 ```
 GIT="https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/photogimp/" && sudo wget "$GIT"install.sh "$GIT"uninstall.sh && bash install.sh
 
 ```
 
-## Uninstall Inkscape:
+## Uninstall PhotoGIMP:
 ```
 sudo wget https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/photogimp/uninstall.sh && bash uninstall.sh
 ```
