@@ -16,8 +16,8 @@ sudo apt autoremove -y 2> /dev/null
 DESK_PATH=$(xdg-user-dir DESKTOP)
 sudo rm -rf "$DESK_PATH/gimp.desktop" 2> /dev/null
 sudo rm -rf ~/.config/GIMP* 2> /dev/null
-sudo rm -rf "/usr/share/icons/photogimp.png"
-sudo rm -rf "/usr/share/icons/hicolor/128x128/apps/photogimp.png"
+sudo rm -rf "/usr/share/icons/photogimp.png" 2> /dev/null
+sudo rm -rf "/usr/share/icons/hicolor/128x128/apps/photogimp.png" 2> /dev/null
 
 # Remove this uninstaller
 if ([ "$1" != "noremove" ] && [ ! -f .noremove ]); then
