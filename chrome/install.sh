@@ -34,6 +34,7 @@ sudo apt --fix-broken install -y
 
 # Create desktop launcher
 APP_PATH="/usr/share/applications/google-chrome.desktop"
+sudo sed -i 's|Exec=/usr/bin/google-chrome-stable |Exec=/usr/bin/google-chrome-stable --start-maximized |g' $APP_PATH
 chmodown "$APP_PATH"
 
 # Remove this insaller
