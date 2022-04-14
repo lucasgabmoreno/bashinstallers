@@ -20,7 +20,8 @@ bash uninstall.sh noremove
 sudo apt-get install megatools -y
 
 # Install
-megadl --print-names 'https://mega.nz/#!LJ9FyK7b!t88t6YBo2Wm_ABkSO7GikxujDF5Hddng9bgDb8fwoJQ'
+# megadl --print-names 'https://mega.nz/#!LJ9FyK7b!t88t6YBo2Wm_ABkSO7GikxujDF5Hddng9bgDb8fwoJQ'
+megadl --print-names 'https://mega.nz/#!CZt1WLqT!mjtWNaepdT8Ao9LQ-HQQWWsqLo0yL-1Ca2eYXVOuLLU'
 sudo bash JD2Setup_x64.sh
 sudo rm -rf JD2Setup_x64.sh
 
