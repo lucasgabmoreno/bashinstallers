@@ -1,4 +1,4 @@
-# Inkscape 1.1
+# Inkscape
 <img src="preview.svg" width="200">
 
 ## Works on:
