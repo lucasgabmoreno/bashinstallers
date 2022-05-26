@@ -17,7 +17,7 @@ START_TIME=`date +%s`
 bash uninstall.sh noremove
 
 # Install
-sudo add-apt-repository ppa:inkscape.dev/stable-1.1 -y
+sudo add-apt-repository ppa:inkscape.dev/stable -y
 sudo apt-get update -y
 sudo apt install inkscape -y
 
