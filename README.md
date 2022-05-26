@@ -9,7 +9,7 @@ Easily install software for Linux Mint.
 * [Broadcom BCM43x](bcm43x)
 * [Google Chrome](chrome)
 * [FreeFileSync](freefilesync)
-* [Inkscape 1.1](inkscape)
+* [Inkscape](inkscape)
 * [JDownloader 2](jdownloader)
 * [Mailspring](mailspring)
 * [OnlyOffice](onlyoffice)
