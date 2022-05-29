@@ -24,6 +24,18 @@ sudo apt install inkscape -y
 # Final fixes
 sudo apt --fix-broken install -y
 
+# If Debian will download AppImage and use it as GUI
+if [[ $(gcc --version) == *Debian* ]]; then
+USER_PATH=$(xdg-user-dir)
+APP_IMAGE=Inkscape-dc2aeda-x86_64.AppImage
+APP_IMAGE_URL=https://inkscape.org/es/gallery/item/33450/"$APP_IMAGE"
+sudo mkdir ~/inkscape
+sudo wget -t inf $APP_IMAGE_URL
+sudo mv "$APP_IMAGE" ~/inkscape/Inkscape.AppImage
+chmodown ~/inkscape/Inkscape.AppImage
+sudo sed -i "s|Exec=inkscape %F|Exec=$USER_PATH/inkscape/Inkscape.AppImage|g" /usr/share/applications/org.inkscape.Inkscape.desktop
+fi
+
 # Create desktop launcher
 APP_PATH=/usr/share/applications/org.inkscape.Inkscape.desktop
 chmodown "$APP_PATH"
