@@ -12,6 +12,7 @@ sudo apt remove inkscape* -y 2> /dev/null
 sudo apt purge inkscape* -y 2> /dev/null
 sudo apt autoremove -y 2> /dev/null
 sudo flatpak uninstall org.inkscape.Inkscape* -y 2> /dev/null
+sudo rm -rf ~/inkscape* 2> /dev/null
 
 # Remove trash
 DESK_PATH=$(xdg-user-dir DESKTOP)
