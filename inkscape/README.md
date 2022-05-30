@@ -6,6 +6,11 @@
 * Ubuntu
 * Chrome OS / Debian
 
+| &nbsp; | GUI | command |
+| :--- | :--- | :--- | 
+| Ubuntu | last | last | 
+| Debian | last | package |
+
 ## Install Inkscape:
 ```
 sudo rm -rf install.sh uninstall.sh 2> /dev/null && GIT="https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/inkscape/" && sudo wget "$GIT"install.sh "$GIT"uninstall.sh && bash install.sh
