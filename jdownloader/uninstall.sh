@@ -22,8 +22,8 @@ if ([ "$1" != "noremove" ] && [ ! -f .noremove ]); then
 fi
 
 # Final message
-APP_PATH="/usr/share/applications/JDownloader 2-0.desktop"
-if [ ! -e "$APP_PATH" ]; then 
+APP_PATH=/usr/share/applications/JDownloader*.desktop
+if [ ! -e $APP_PATH ]; then 
 echo "JDownloader uninstalled!"
 else
 echo 'ERROR!!! Please copy the error message and paste them into https://github.com/lucasgabmoreno/bashinstallers/issues.'
