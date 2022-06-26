@@ -4,6 +4,7 @@
 ## Works on:
 * Linux Mint
 * Ubuntu
+* Debian
 
 ## Install Jdownloader:
 ```
