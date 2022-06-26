@@ -20,25 +20,20 @@ bash uninstall.sh noremove
 sudo apt-get install megatools -y
 
 # Install
-# megadl --print-names 'https://mega.nz/#!LJ9FyK7b!t88t6YBo2Wm_ABkSO7GikxujDF5Hddng9bgDb8fwoJQ'
-megadl --print-names 'https://mega.nz/#!CZt1WLqT!mjtWNaepdT8Ao9LQ-HQQWWsqLo0yL-1Ca2eYXVOuLLU'
-sudo bash JDownloader2Setup_unix_jre11.sh
-sudo rm -rf JDownloader2Setup_unix_jre11.sh
+megadl --print-names 'https://mega.nz/#!bZtTnSDL!nVnOHuT8LMvvB9EuXp1nrEvjKjzQ6lSRShKkyGNRYPo'
+sudo bash JDownloader*sh
+sudo rm -rf JDownloader*sh
 
 # Final fixes
 sudo apt --fix-broken install -y
 
 # Create desktop launcher
-APP_PATH="/usr/share/applications/JDownloader 2-0.desktop"
-APP_PATH2="/usr/share/applications/JDownloader 2 Update & Rescue-0.desktop"
-sudo sed -i 's|Icon=/opt/jd2/.install4j/JDownloader2.png|Icon=jdownloader|g' "$APP_PATH"
-sudo sed -i 's|Icon=/opt/jd2/.install4j/JDownloader2Update.png|Icon=jdownloader|g' "$APP_PATH2"
-chmodown "$APP_PATH"
-chmodown "$APP_PATH2"
-APP_PATH_STR=$(paste "$APP_PATH")
+APP_PATH=/usr/share/applications/*JDownloader2.desktop
+sudo sed -i 's|Icon=/opt/jd2/.install4j/JDownloader2.png|Icon=jdownloader|g' $APP_PATH
+chmodown $APP_PATH
+APP_PATH_STR=$(paste $APP_PATH)
 if [[ "$APP_PATH_STR" != *"StartupWMClass"* ]]; then
-    sudo echo "StartupWMClass=JDownloader" >> "$APP_PATH"
-    sudo echo "StartupWMClass=JDownloader" >> "$APP_PATH2"
+    sudo echo "StartupWMClass=JDownloader" >> $APP_PATH
 fi
 sudo cp "/opt/jd2/.install4j/JDownloader2.png" /usr/share/icons/jdownloader.png
 
