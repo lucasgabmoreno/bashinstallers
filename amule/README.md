@@ -12,7 +12,7 @@ sudo rm -rf install.sh* uninstall.sh* 2> /dev/null && GIT="https://raw.githubuse
 
 ## Uninstall:
 ```
-sudo rm -rf uninstall.sh* 2> /dev/null && 
+sudo rm -rf uninstall.sh* 2> /dev/null && GIT="https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/amule/" && sudo wget "$GIT"uninstall.sh && bash uninstall.sh
 ```
 
 ## Software installed:
