@@ -4,7 +4,6 @@ Easily install software for Linux Mint.
 <img src="preview.svg" width="200">
 
 ## Software
-* [aMule 2.3.2](amule)
 * [Blender 3.0](blender)
 * [Broadcom BCM43x](bcm43x)
 * [Google Chrome](chrome)
