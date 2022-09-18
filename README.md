@@ -4,7 +4,7 @@ Install last version software not available in [mintinstall](https://github.com/
 <img src="preview.svg" width="200">
 
 ## Software
-<!-- <img src="https://www.blender.org/wp-content/themes/bthree/assets/images/favicon.ico" style="width:16px">&nbsp; [aMule](amule)<br> -->
+<!-- <img src=amule/favicon.ico" style="width:16px">&nbsp; [aMule](amule)<br> -->
 <img src="https://www.blender.org/wp-content/themes/bthree/assets/images/favicon.ico" style="width:16px">&nbsp; [Blender 3.0](blender)<br>
 <img src="https://www.broadcom.com/img/favicon.ico" style="width:16px">&nbsp; [Broadcom BCM43x](bcm43x)<br>
 <img src="https://www.google.com/chrome/static/images/favicons/favicon-16x16.png" style="width:16px">&nbsp; [Google Chrome](chrome)<br>
