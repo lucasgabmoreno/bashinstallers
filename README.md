@@ -16,8 +16,7 @@ Install last version software not available in [mintinstall](https://github.com/
 <img src="photogimp/photogimp.png" style="width:16px">&nbsp; [PhotoGIMP](photogimp)<br>
 
 ### Works on
-<img src="https://www.linuxmint.com/web/img/favicon.ico" style="width:16px">&nbsp; [Linux Mint Ubuntu Edition](https://www.linuxmint.com/download.php)<br>
-<img src="https://www.linuxmint.com/web/img/favicon.ico" style="width:16px">&nbsp; [Linux Mint Debian Edition](https://www.linuxmint.com/download_lmde.php)
+<img src="https://www.linuxmint.com/web/img/favicon.ico" style="width:16px">&nbsp; [Linux Mint](https://www.linuxmint.com/download.php) / [LMDE](https://www.linuxmint.com/download_lmde.php)<br>
 
 ### Also could work on:
 <img src="https://www.debian.org/favicon.ico" style="width:16px">&nbsp; Debian and derivatives<br>
