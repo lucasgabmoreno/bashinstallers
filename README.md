@@ -15,13 +15,17 @@ Install last version software not available in [mintinstall](https://github.com/
 <img src="https://static-www.onlyoffice.com/v9.5.0/images/favicons01/favicon.png" style="width:16px">&nbsp; [OnlyOffice](onlyoffice)<br>
 <img src="photogimp/photogimp.png" style="width:16px">&nbsp; [PhotoGIMP](photogimp)<br>
 
+---
+
 ### Works on
 <img src="https://www.linuxmint.com/web/img/favicon.ico" style="width:16px">&nbsp; [Linux Mint](https://www.linuxmint.com/download.php) / [LMDE](https://www.linuxmint.com/download_lmde.php)<br>
 
 ### Also could work on:
-<img src="https://www.debian.org/favicon.ico" style="width:16px">&nbsp; Debian and derivatives<br>
-<img src="https://assets.ubuntu.com/v1/49a1a858-favicon-32x32.png" style="width:16px">&nbsp; Ubuntu and derivatives<br>
-<img src="https://chromeenterprise.google/static/images/fav/favicon.ico" style="width:16px">&nbsp; Chrome OS
+<img src="https://www.debian.org/favicon.ico" style="width:16px">&nbsp; [Debian](https://www.debian.org/) and [derivatives](https://www.debian.org/derivatives/)<br>
+<img src="https://assets.ubuntu.com/v1/49a1a858-favicon-32x32.png" style="width:16px">&nbsp; [Ubuntu](https://ubuntu.com/) and [derivatives](https://wiki.ubuntu.com/DerivativeTeam/Derivatives)<br>
+<img src="https://chromeenterprise.google/static/images/fav/favicon.ico" style="width:16px">&nbsp; [Chrome OS](https://support.google.com/chromebook/answer/9145439)
+
+---
 
 ### Thanks:
 * [Papirus](https://github.com/PapirusDevelopmentTeam)
