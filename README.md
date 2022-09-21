@@ -1,8 +1,4 @@
 # Bash Installers
-Install last version software not available in [mintinstall](https://github.com/linuxmint/mintinstall).
-
-<img src="preview.svg" width="200">
-
 ## Software
 <!-- <img src=amule/favicon.ico" style="width:16px">&nbsp; [aMule](amule)<br> -->
 <img src="https://www.blender.org/wp-content/themes/bthree/assets/images/favicon.ico" style="width:16px">&nbsp; [Blender 3.0](blender)<br>
@@ -21,11 +17,6 @@ Install last version software not available in [mintinstall](https://github.com/
 <img src="https://www.linuxmint.com/web/img/favicon.ico" style="width:16px">&nbsp; [Linux Mint](https://www.linuxmint.com/download.php) / [LMDE](https://www.linuxmint.com/download_lmde.php)<br>
 
 ### Also could work on:
-<img src="https://www.debian.org/favicon.ico" style="width:16px">&nbsp; [Debian](https://www.debian.org/) and [derivatives](https://www.debian.org/derivatives/)<br>
-<img src="https://assets.ubuntu.com/v1/49a1a858-favicon-32x32.png" style="width:16px">&nbsp; [Ubuntu](https://ubuntu.com/) and [derivatives](https://wiki.ubuntu.com/DerivativeTeam/Derivatives)<br>
-<img src="https://chromeenterprise.google/static/images/fav/favicon.ico" style="width:16px">&nbsp; [Chrome OS](https://support.google.com/chromebook/answer/9145439)
-
----
-
-### Thanks:
-* [Papirus](https://github.com/PapirusDevelopmentTeam)
+<img src="https://www.debian.org/favicon.ico" style="width:16px">&nbsp; [Debian](https://www.debian.org/) / [Debian derivatives](https://www.debian.org/derivatives/)<br>
+<img src="https://assets.ubuntu.com/v1/49a1a858-favicon-32x32.png" style="width:16px">&nbsp; [Ubuntu](https://ubuntu.com/) / [Ubuntu derivatives](https://wiki.ubuntu.com/DerivativeTeam/Derivatives)<br>
+<img src="https://chromeenterprise.google/static/images/fav/favicon.ico" style="width:16px">&nbsp; [Chrome OS Debian container](https://support.google.com/chromebook/answer/9145439)
