@@ -1,9 +1,6 @@
 # Broadcom BCM43x
 <img src="preview.svg" width="200">
 
-## Works on:
-* Linux Mint
-
 ## Install
 ```
 GIT="https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/bcm43x/" && sudo wget "$GIT"install.sh "$GIT"uninstall.sh && bash install.sh
