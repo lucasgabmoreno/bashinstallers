@@ -15,7 +15,7 @@ sudo wget https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/b
 * BCM43142
 * BCM43331
 * BCM4360 
-* BCM4352 | BCM94352
+* BCM4352 / BCM94352
 * BCM4311
 * BCM4312
 * BCM4313
