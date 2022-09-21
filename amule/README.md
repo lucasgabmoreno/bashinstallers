@@ -1,10 +1,6 @@
 # aMule 2.3.2
 <img src="preview.svg" width="200">
 
-## Works on:
-* Linux Mint
-* Ubuntu
-
 ## Install
 ```
 sudo rm -rf install.sh* uninstall.sh* 2> /dev/null && GIT="https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/amule/" && sudo wget "$GIT"install.sh "$GIT"uninstall.sh && bash install.sh
@@ -25,9 +21,6 @@ sudo rm -rf uninstall.sh* 2> /dev/null && GIT="https://raw.githubusercontent.com
 * amule-utils
 * amule-utils-gui
 * amule-emc
-
-## Recommended:
-* [Papirus aMule Theme](https://github.com/PapirusDevelopmentTeam/papirus-amule-theme)
 
 ## Thanks:
 * [aMule](https://www.amule.org/)
