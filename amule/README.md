@@ -6,12 +6,12 @@
 sudo rm -rf install.sh* uninstall.sh* 2> /dev/null && GIT="https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/amule/" && sudo wget "$GIT"install.sh "$GIT"uninstall.sh && bash install.sh
 ```
 
-## Uninstall:
+## Uninstall
 ```
 sudo rm -rf uninstall.sh* 2> /dev/null && GIT="https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/amule/" && sudo wget "$GIT"uninstall.sh && bash uninstall.sh
 ```
 
-## Software installed:
+## Software installed
 * libcrypto++6
 * amule-common
 * libwxbase
@@ -22,7 +22,7 @@ sudo rm -rf uninstall.sh* 2> /dev/null && GIT="https://raw.githubusercontent.com
 * amule-utils-gui
 * amule-emc
 
-## Thanks:
+## Thanks
 * [aMule](https://www.amule.org/)
 * [MuyLinux](https://www.muylinux.com/2020/12/02/amule-ubuntu-20-04-lts/)
 * [Papirus](https://github.com/PapirusDevelopmentTeam)
