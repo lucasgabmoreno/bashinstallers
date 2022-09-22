@@ -1,26 +1,20 @@
 # OnlyOffice
 <img src="preview.svg" width="200">
 
-## Works on:
-* Linux Mint
-* Ubuntu
-* Chrome OS / Debian
-
-
-## Install OnlyOffice:
+## Install
 ```
-GIT="https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/onlyoffice/" && sudo wget "$GIT"install.sh "$GIT"uninstall.sh && bash install.sh
+sudo rm -rf install.sh* uninstall.sh* 2> /dev/null && GIT="https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/onlyoffice/" && sudo wget "$GIT"install.sh "$GIT"uninstall.sh && bash install.sh
 ```
 
-## Uninstall OnlyOffice:
+## Uninstall
 ```
-sudo wget https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/onlyoffice/uninstall.sh && bash uninstall.sh
+sudo rm -rf uninstall.sh* 2> /dev/null && sudo wget https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/onlyoffice/uninstall.sh && bash uninstall.sh
 ```
 
-## Software installed:
+## Software installed
 * onlyoffice-dektopeditors
 * fonts-crosextra-carlito
 
-## Thanks:
+## Thanks
 * [OnlyOffice](https://www.onlyoffice.com/es/)
 * [Papirus](https://github.com/PapirusDevelopmentTeam)
