@@ -1,20 +1,16 @@
 # PhotoGIMP
 <img src="preview.svg" width="200">
 
-## Works on:
-* Linux Mint
-* Ubuntu
-* Chrome OS / Debian
 
-## Install PhotoGIMP:
+## Install
 ```
-GIT="https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/photogimp/" && sudo wget "$GIT"install.sh "$GIT"uninstall.sh && bash install.sh
+sudo rm -rf install.sh* uninstall.sh* 2> /dev/null && GIT="https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/photogimp/" && sudo wget "$GIT"install.sh "$GIT"uninstall.sh && bash install.sh
 
 ```
 
-## Uninstall PhotoGIMP:
+## Uninstall
 ```
-sudo wget https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/photogimp/uninstall.sh && bash uninstall.sh
+sudo rm -rf uninstall.sh* 2> /dev/null && sudo wget https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/photogimp/uninstall.sh && bash uninstall.sh
 ```
 
 ## Software installed:
