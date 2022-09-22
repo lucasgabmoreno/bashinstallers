@@ -1,11 +1,6 @@
 # Inkscape
 <img src="preview.svg" width="200">
 
-## Works on:
-* Linux Mint
-* Ubuntu
-* Chrome OS / Debian
-
 | &nbsp; | GUI | command |
 | :--- | :--- | :--- | 
 | Ubuntu | last | last | 
