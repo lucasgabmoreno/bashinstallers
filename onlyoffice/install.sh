@@ -36,12 +36,10 @@ chmodown "$FROM_PATH"
 FROM_PATH_STR=$(paste $FROM_PATH)
 if [[ "$FROM_PATH_STR" != *"StartupWMClass"* ]]; then
     sudo sed '2 i StartupWMClass=DesktopEditors' "$FROM_PATH" >> onlyoffice-desktopeditors.desktop
-    sudo rm -rf "$FROM_PATH"
-    sudo mv onlyoffice-desktopeditors.desktop /usr/share/applications/
 fi
-DESK_PATH=$(xdg-user-dir DESKTOP)
-sudo cp "$FROM_PATH" "$DESK_PATH/"
-chmodown "$DESK_PATH/onlyoffice-desktopeditors.desktop"
+sudo sed -i 's|Keywords=Text;|Keywords=Text;winword;excel;powerpnt;|g' onlyoffice-desktopeditors.desktop
+sudo rm -rf "$FROM_PATH"
+sudo mv onlyoffice-desktopeditors.desktop /usr/share/applications/
 
 # Remove trash
 sudo rm -rf ~/.local/share/applications/Desktopeditors* 2> /dev/null
