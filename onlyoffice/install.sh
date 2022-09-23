@@ -34,8 +34,9 @@ sudo apt --fix-broken install -y
 FROM_PATH="/usr/share/applications/onlyoffice-desktopeditors.desktop"
 chmodown "$FROM_PATH" 
 FROM_PATH_STR=$(paste $FROM_PATH)
+sudo cp "$FROM_PATH" onlyoffice-desktopeditors.desktop
 if [[ "$FROM_PATH_STR" != *"StartupWMClass"* ]]; then
-    sudo sed '2 i StartupWMClass=DesktopEditors' "$FROM_PATH" >> onlyoffice-desktopeditors.desktop
+    sudo sed '2 i StartupWMClass=DesktopEditors' onlyoffice-desktopeditors.desktop
 fi
 sudo sed -i 's|Keywords=Text;|Keywords=Text;winword;excel;powerpnt;|g' onlyoffice-desktopeditors.desktop
 sudo rm -rf "$FROM_PATH"
