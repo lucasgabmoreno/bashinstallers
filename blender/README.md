@@ -1,4 +1,4 @@
-# Blender 3.0
+# Blender
 <img src="preview.svg" width="200">
 
 ## Install:
