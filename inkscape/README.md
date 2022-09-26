@@ -25,5 +25,5 @@ bash uninstall.sh
 * inkscape
 
 ## Thanks
-* [Inkscape](https://inkscape.org/es/release/inkscape-1.1/gnulinux/ubuntu/ppa/)
+* [Inkscape](https://inkscape.org/)
 * [Papirus](https://github.com/PapirusDevelopmentTeam)

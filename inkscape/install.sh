@@ -27,8 +27,9 @@ sudo apt --fix-broken install -y
 # If Debian will download AppImage and use it as GUI
 if [[ $(gcc --version) == *Debian* ]]; then
 USER_PATH=$(xdg-user-dir)
-APP_IMAGE=Inkscape-dc2aeda-x86_64.AppImage
-APP_IMAGE_URL=https://inkscape.org/es/gallery/item/33450/"$APP_IMAGE"
+# https://inkscape.org/release/all/gnulinux/appimage/
+APP_IMAGE=Inkscape-9c6d41e-x86_64.AppImage
+APP_IMAGE_URL=https://inkscape.org/gallery/item/34672/"$APP_IMAGE"
 sudo mkdir ~/inkscape
 sudo wget -t inf $APP_IMAGE_URL
 sudo mv "$APP_IMAGE" ~/inkscape/Inkscape.AppImage
