@@ -14,9 +14,9 @@
 ---
 
 ### Works on
-<img src="https://www.linuxmint.com/web/img/favicon.ico" style="width:16px">&nbsp; [Linux Mint](https://www.linuxmint.com/download.php) / [LMDE](https://www.linuxmint.com/download_lmde.php)<br>
+<img src="img/linuxmint.ico" style="width:16px">&nbsp; [Linux Mint](https://www.linuxmint.com/download.php) / [LMDE](https://www.linuxmint.com/download_lmde.php)<br>
 
 ### Also could work on:
-<img src="debian.ico" style="width:16px">&nbsp; [Debian](https://www.debian.org/) / [Debian derivatives](https://www.debian.org/derivatives/)<br>
-<img src="ubuntu.png" style="width:16px">&nbsp; [Ubuntu](https://ubuntu.com/) / [Ubuntu derivatives](https://wiki.ubuntu.com/DerivativeTeam/Derivatives)<br>
-<img src="chrome.ico" style="width:16px">&nbsp; [Chrome OS Debian container](https://support.google.com/chromebook/answer/9145439)
+<img src="img/debian.ico" style="width:16px">&nbsp; [Debian](https://www.debian.org/) / [Debian derivatives](https://www.debian.org/derivatives/)<br>
+<img src="img/ubuntu.png" style="width:16px">&nbsp; [Ubuntu](https://ubuntu.com/) / [Ubuntu derivatives](https://wiki.ubuntu.com/DerivativeTeam/Derivatives)<br>
+<img src="img/chrome.ico" style="width:16px">&nbsp; [Chrome OS Debian container](https://support.google.com/chromebook/answer/9145439)

@@ -16,7 +16,7 @@ sudo chown $USER:$USER "$1"
 
 # Download and install
 wget_dpkg_rm () {
-SOFT_URL=$1
+SOFT_URL="$1"
 SOFT_DEB=${SOFT_URL##*/}
 sudo wget -t inf "$SOFT_URL"
 if [ ! -f "$SOFT_DEB" ]; then curl -L -O "$SOFT_URL"; fi
