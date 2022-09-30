@@ -4,14 +4,14 @@
 ## Install
 ```
 sudo rm -rf install.sh* 2> /dev/null
-sudo wget 'https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/onlyoffice/install.sh'
+sudo wget 'https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/onlyoffice%20beta/install.sh'
 bash install.sh 'https://download.onlyoffice.com/install/desktop/editors/linux/onlyoffice-desktopeditors_amd64.deb'
 ```
 
 ## Uninstall
 ```
 sudo rm -rf install.sh* 2> /dev/null
-sudo wget 'https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/onlyoffice/install.sh'
+sudo wget 'https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/onlyoffice%20beta/install.sh'
 bash install.sh uninstall
 ```
 
