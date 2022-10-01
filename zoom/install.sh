@@ -1,11 +1,14 @@
 #!/bin/bash
 
+sudo apt install libglib2.0-0 libxcb-shape0 libxcb-shm0 libxcb-xfixes0 libxcb-randr0 libxcb-image0 libfontconfig1 libgl1-mesa-glx libxi6 libsm6 libxrender1 libpulse0 libxcomposite1 libxslt1.1 libsqlite3-0 libxcb-keysyms1 libxcb-xtest0 ibus -y
+sudo apt --fix-broken install -y
+
 SOFT_URL=$1
-SOFT_PACKAGE=onlyoffice
-SOFT_KILL=DesktopEditors
-SOFT_FLATPACK=org.onlyoffice.desktopeditors
+SOFT_PACKAGE=zoom
+SOFT_KILL=zoom
+SOFT_FLATPACK=us.zoom.Zoom
 DESK_PATH=$(xdg-user-dir DESKTOP) #/home/usernme/Dekstop/
-LAUNCHER_PATH="/usr/share/applications/onlyoffice-desktopeditors.desktop"
+LAUNCHER_PATH="/usr/share/applications/Zoom.desktop"
 LAUNCHER_DESK=${LAUNCHER_PATH##*/} #soft.desktop
 
 # Permissions
@@ -50,9 +53,7 @@ sudo flatpak uninstall "$SOFT_FLATPACK"* -y 2> /dev/null
 # Remove trash
 sudo rm -rf "$DESK_PATH/$LAUNCHER_DESK" 2> /dev/null
 sudo rm -rf "$LAUNCHER_PATH"
-sudo rm -rf ~/.config/onlyoffice* 2> /dev/null
-sudo rm -rf ~/.local/share/onlyoffice* 2> /dev/null
-sudo rm -rf ~/.local/share/applications/Desktopeditors* 2> /dev/null
+sudo rm -rf ~/.config/zoomus.conf* 2> /dev/null
 
 # Final message
 if [[ $(sudo apt list "$SOFT_PACKAGE"* --installed 2> /dev/null) != *"$SOFT_PACKAGE"* ]]; then
@@ -71,18 +72,7 @@ wget_dpkg_rm "$SOFT_URL"
 sudo apt --fix-broken install -y
 
 # Desktop launcher
-sudo cp "$LAUNCHER_PATH" "$LAUNCHER_DESK"
-chmodown "$LAUNCHER_DESK"
-LAUNCHER_DESK_STR=$(paste "$LAUNCHER_DESK")
-if [[ "$LAUNCHER_DESK_STR" != *"StartupWMClass"* ]]; then
-    sudo sed -i '2 i\StartupWMClass=DesktopEditors' "$LAUNCHER_DESK"
-fi # if not StartuoWMClass
-sudo sed -i 's|Keywords=Text;|Keywords=Text;winword;excel;powerpnt;|g' "$LAUNCHER_DESK"
-sudo rm -rf "$LAUNCHER_PATH" 
-sudo mv "$LAUNCHER_DESK" /usr/share/applications/
-
-# Remove trash
-sudo rm -rf ~/.local/share/applications/Desktopeditors* 2> /dev/null
+chmodown "$LAUNCHER_PATH"
 
 # Remove this insaller
 sudo rm -rf install.sh

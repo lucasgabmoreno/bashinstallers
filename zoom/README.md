@@ -4,21 +4,38 @@
 ## Install
 ```
 sudo rm -rf install.sh* 2> /dev/null
-sudo wget 'https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/onlyoffice/install.sh'
-bash install.sh 'https://download.onlyoffice.com/install/desktop/editors/linux/onlyoffice-desktopeditors_amd64.deb'
+sudo wget 'https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/zoom/install.sh'
+bash install.sh 'https://zoom.us/client/latest/zoom_amd64.deb'
 ```
 
 ## Uninstall
 ```
 sudo rm -rf install.sh* 2> /dev/null
-sudo wget 'https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/onlyoffice/install.sh'
+sudo wget 'https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/zoom/install.sh'
 bash install.sh uninstall
 ```
 
 ## Software installed
-* onlyoffice-dektopeditors
-* fonts-crosextra-carlito
+* zoom
+* libglib2.0-0
+* libxcb-shape0
+* libxcb-shm0
+* ibxcb-xfixes0
+* libxcb-randr0 
+* libxcb-image0 
+* libfontconfig1 
+* libgl1-mesa-glx 
+* libxi6 
+* libsm6 
+* libxrender1 
+* libpulse0 
+* libxcomposite1
+* libxslt1.1 
+* libsqlite3-0 
+* libxcb-keysyms1 
+* libxcb-xtest0
+* ibus
 
 ## Thanks
-* [OnlyOffice](https://www.onlyoffice.com/es/)
+* [Zoom](https://zoom.us/)
 * [Papirus](https://github.com/PapirusDevelopmentTeam)
