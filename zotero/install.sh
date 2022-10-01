@@ -40,7 +40,7 @@ sudo rm -rf "$LAUNCHER_PATH"
 sudo rm -rf ~/Zotero* 2> /dev/null
 
 # Final message
-if [[ $(sudo apt list "$SOFT_PACKAGE"*  2> /dev/null) != *"$SOFT_PACKAGE"* ]]; then
+if [[ $(sudo apt list "$SOFT_PACKAGE"* --installed 2> /dev/null) != *"$SOFT_PACKAGE"* ]]; then
     echo "Software uninstalled!"
 else
     echo 'Error!'
@@ -72,7 +72,7 @@ sudo mv "$LAUNCHER_DESK" /usr/share/applications/
 sudo rm -rf install.sh
 
 # Final message
-if [[ $(sudo apt list "$SOFT_PACKAGE"*  2> /dev/null) == *"$SOFT_PACKAGE"* ]]; then 
+if [[ $(sudo apt list "$SOFT_PACKAGE"* --installed 2> /dev/null) == *"$SOFT_PACKAGE"* ]]; then 
     sudo echo 'Software installed in '$(date -d @$((`date +%s`-$START_TIME)) -u +%H:%M:%S)
 else
     echo 'Error!'
