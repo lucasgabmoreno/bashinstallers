@@ -1,8 +1,5 @@
 #!/bin/bash
 
-sudo apt install libglib2.0-0 libxcb-shape0 libxcb-shm0 libxcb-xfixes0 libxcb-randr0 libxcb-image0 libfontconfig1 libgl1-mesa-glx libxi6 libsm6 libxrender1 libpulse0 libxcomposite1 libxslt1.1 libsqlite3-0 libxcb-keysyms1 libxcb-xtest0 ibus -y
-sudo apt --fix-broken install -y
-
 SOFT_URL=$1
 SOFT_PACKAGE=zoom
 SOFT_KILL=zoom
@@ -65,6 +62,10 @@ fi
 # INSTALLER
 
 if [ "$SOFT_URL" != "uninstall" ]; then
+
+# Dependencies
+sudo apt install libglib2.0-0 libxcb-shape0 libxcb-shm0 libxcb-xfixes0 libxcb-randr0 libxcb-image0 libfontconfig1 libgl1-mesa-glx libxi6 libsm6 libxrender1 libpulse0 libxcomposite1 libxslt1.1 libsqlite3-0 libxcb-keysyms1 libxcb-xtest0 ibus -y
+sudo apt --fix-broken install -y
 
 wget_dpkg_rm "$SOFT_URL"
 
