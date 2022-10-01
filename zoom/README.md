@@ -1,4 +1,4 @@
-# OnlyOffice
+# Zoom
 <img src="preview.svg" width="200">
 
 ## Install
