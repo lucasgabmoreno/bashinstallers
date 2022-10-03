@@ -62,14 +62,14 @@ sudo rm -rf JDownloader*sh
 sudo apt --fix-broken install -y
 
 # Desktop launcher
-sudo cp "$LAUNCHER_PATH" "$LAUNCHER_DESK"
+sudo cp "/usr/share/applications/"*"$LAUNCHER_DESK" "$LAUNCHER_DESK"
 chmodown "$LAUNCHER_DESK"
 LAUNCHER_DESK_STR=$(paste "$LAUNCHER_DESK")
 if [[ "$LAUNCHER_DESK_STR" != *"StartupWMClass"* ]]; then
     sudo sed -i '2 i\StartupWMClass=JDownloader' "$LAUNCHER_DESK"
 fi # if not StartuoWMClass
 sudo sed -i 's|Icon=/opt/jd2/.install4j/JDownloader2.png|Icon=jdownloader|g' "$LAUNCHER_DESK"
-sudo rm -rf "$LAUNCHER_PATH" 
+sudo rm -rf "/usr/share/applications/"*"$LAUNCHER_DESK" 
 sudo mv "$LAUNCHER_DESK" /usr/share/applications/
 sudo cp "/opt/jd2/.install4j/JDownloader2.png" /usr/share/icons/jdownloader.png
 
