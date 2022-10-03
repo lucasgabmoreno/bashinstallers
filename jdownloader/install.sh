@@ -5,7 +5,7 @@ SOFT_PACKAGE=/opt/jd2/JDownloader2
 SOFT_KILL=java
 SOFT_FLATPACK=org.jdownloader.JDownloader
 DESK_PATH=$(xdg-user-dir DESKTOP) #/home/usernme/Dekstop/
-LAUNCHER_PATH="/usr/share/applications/*JDownloader2.desktop"
+LAUNCHER_PATH="/usr/share/applications/JDownloader2.desktop"
 LAUNCHER_DESK=${LAUNCHER_PATH##*/} #soft.desktop
 
 # Permissions
@@ -34,12 +34,11 @@ sudo bash "/opt/jd2/Uninstall JDownloader" 2> /dev/null
 sudo flatpak uninstall "$SOFT_FLATPACK"* -y 2> /dev/null
 
 # Remove trash
-sudo rm -rf "$DESK_PATH/$LAUNCHER_DESK" 2> /dev/null
-sudo rm -rf "$LAUNCHER_PATH" 2> /dev/null
-sudo rm -rf /usr/share/applications/JDownloader* 2> /dev/null
+sudo rm -rf "$DESK_PATH/"*"$LAUNCHER_DESK" 2> /dev/null
+sudo rm -rf /usr/share/applications/*JDownloader* 2> /dev/null
 sudo rm -rf /usr/share/icons/jdownloader* 2> /dev/null
 sudo rm -rf /opt/jd2* 2> /dev/null
-sudo rm -rf /tmp/JDownloader** 2> /dev/null
+sudo rm -rf /tmp/JDownloader* 2> /dev/null
 
 # Final message
 if [ ! -e "$SOFT_PACKAGE" ]; then 
