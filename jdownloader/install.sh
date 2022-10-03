@@ -1,53 +1,88 @@
 #!/bin/bash
 
-# Functions
+SOFT_URL=$1
+SOFT_PACKAGE=/opt/jd2/JDownloader2
+SOFT_KILL=java
+SOFT_FLATPACK=org.jdownloader.JDownloader
+DESK_PATH=$(xdg-user-dir DESKTOP) #/home/usernme/Dekstop/
+LAUNCHER_PATH="/usr/share/applications/*JDownloader2.desktop"
+LAUNCHER_DESK=${LAUNCHER_PATH##*/} #soft.desktop
+
+# Permissions
 chmodown() {
 sudo chmod +x "$1"
 sudo chown $USER:$USER "$1"
 }
 
+
 if [ $USER == "root" ]; then
-echo "Don't run this bash file as root user"
+echo "Don't run as root user"
 else
 
 # Start count
 START_TIME=`date +%s` 
 
+
+# UNINSTALLER
 # Remove old versions and trash
-bash uninstall.sh noremove
+
+# Close
+kill $(pidof "$SOFT_KILL") 2> /dev/null
+
+# Uninstall
+sudo bash "/opt/jd2/Uninstall JDownloader" 2> /dev/null
+sudo flatpak uninstall "$SOFT_FLATPACK"* -y 2> /dev/null
+
+# Remove trash
+sudo rm -rf "$DESK_PATH/$LAUNCHER_DESK" 2> /dev/null
+sudo rm -rf "$LAUNCHER_PATH" 2> /dev/null
+sudo rm -rf /usr/share/applications/JDownloader* 2> /dev/null
+sudo rm -rf /usr/share/icons/jdownloader* 2> /dev/null
+sudo rm -rf /opt/jd2* 2> /dev/null
+sudo rm -rf /tmp/JDownloader** 2> /dev/null
+
+# Final message
+if [ ! -e "$SOFT_PACKAGE" ]; then 
+    echo "Software uninstalled!"
+else
+    echo 'Error!'
+fi
+
+# INSTALLER
+
+if [ "$SOFT_URL" != "uninstall" ]; then
 
 # Install dependencies
 sudo apt-get install megatools -y
 
-# Install
-megadl --print-names 'https://mega.nz/#!bZtTnSDL!nVnOHuT8LMvvB9EuXp1nrEvjKjzQ6lSRShKkyGNRYPo'
+megadl --print-names "$SOFT_URL"
 sudo bash JDownloader*sh
 sudo rm -rf JDownloader*sh
 
 # Final fixes
 sudo apt --fix-broken install -y
 
-# Create desktop launcher
-APP_PATH=/usr/share/applications/*JDownloader2.desktop
-sudo sed -i 's|Icon=/opt/jd2/.install4j/JDownloader2.png|Icon=jdownloader|g' $APP_PATH
-chmodown $APP_PATH
-APP_PATH_STR=$(paste $APP_PATH)
-if [[ "$APP_PATH_STR" != *"StartupWMClass"* ]]; then
-    sudo echo "StartupWMClass=JDownloader" >> $APP_PATH
-fi
+# Desktop launcher
+sudo cp "$LAUNCHER_PATH" "$LAUNCHER_DESK"
+chmodown "$LAUNCHER_DESK"
+LAUNCHER_DESK_STR=$(paste "$LAUNCHER_DESK")
+if [[ "$LAUNCHER_DESK_STR" != *"StartupWMClass"* ]]; then
+    sudo sed -i '2 i\StartupWMClass=JDownloader' "$LAUNCHER_DESK"
+fi # if not StartuoWMClass
+sudo sed -i 's|Icon=/opt/jd2/.install4j/JDownloader2.png|Icon=jdownloader|g' "$LAUNCHER_DESK"
+sudo rm -rf "$LAUNCHER_PATH" 
+sudo mv "$LAUNCHER_DESK" /usr/share/applications/
 sudo cp "/opt/jd2/.install4j/JDownloader2.png" /usr/share/icons/jdownloader.png
 
 # Remove this insaller
-if [ ! -f .noremove ]; then 
-    sudo rm -rf install.sh uninstall.sh
-fi
+sudo rm -rf install.sh
 
 # Final message
-if [ -e "$APP_PATH" ]; then 
-sudo echo 'JDownloader  installed in '$(date -d @$((`date +%s`-$START_TIME)) -u +%H:%M:%S)
+if [ -e "$SOFT_PACKAGE" ]; then 
+    sudo echo 'Software installed in '$(date -d @$((`date +%s`-$START_TIME)) -u +%H:%M:%S)
 else
-echo 'ERROR!!! Please copy the error message and paste them into https://github.com/lucasgabmoreno/bashinstallers/issues.'
-fi
+    echo 'Error!'
+fi # if installed
 
-fi
-
+fi # if not uninstall
+fi # if not root
