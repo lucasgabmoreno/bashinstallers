@@ -1,5 +1,7 @@
 #!/bin/bash
 
+SOFT_URL=$1
+
 if [ $USER == "root" ]; then
 echo "Don't run as root user"
 else
