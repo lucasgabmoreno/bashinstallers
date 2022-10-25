@@ -84,8 +84,6 @@ sudo mv "$LAUNCHER_DESK" /usr/share/applications/
 # Remove trash
 sudo rm -rf ~/.local/share/applications/Desktopeditors* 2> /dev/null
 
-# Remove this insaller
-sudo rm -rf install.sh
 
 # Final message
 if [[ $(sudo apt list "$SOFT_PACKAGE"* --installed 2> /dev/null) == *"$SOFT_PACKAGE"* ]]; then 
