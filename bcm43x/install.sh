@@ -1,10 +1,21 @@
 #!/bin/bash
 
+if [ $USER == "root" ]; then
+echo "Don't run as root user"
+else
+
 # Start count
 START_TIME=`date +%s` 
 
 # Remove old versions and trash
-bash uninstall.sh noremove
+sudo apt remove bcmwl-* broadcom-* b43-* -y 2> /dev/null
+sudo apt purge bcmwl-* broadcom-* b43-* -y 2> /dev/null
+sudo apt autoremove -y 2> /dev/null
+
+echo "Software uninstalled!"
+
+
+if [ "$SOFT_URL" != "uninstall" ]; then
 
 # Install driver
 CARD=$(sudo lshw -C network)
@@ -39,12 +50,9 @@ else
         sudo echo 'Installed in '$(date -d @$((`date +%s`-$START_TIME)) -u +%H:%M:%S)
         sudo echo "Please reboot!"
     else
-        echo 'ERROR!!! Please copy the error message and paste them into https://github.com/lucasgabmoreno/bashinstallers/issues'
+        echo 'Error!'
     fi
 fi
 
-# Remove this insaller
-if [ ! -f .noremove ]; then
-    sudo rm -rf install.sh uninstall.sh
-fi
-
+fi # if not uninstall
+fi # if not root
