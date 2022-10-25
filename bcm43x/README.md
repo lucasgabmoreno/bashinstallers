@@ -3,7 +3,7 @@
 
 ## Install
 ```
-wget -q -O - https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/bcm43x/install.sh | bash -s 'https://download.onlyoffice.com/install/desktop/editors/linux/onlyoffice-desktopeditors_amd64.deb'
+wget -q -O - https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/bcm43x/install.sh | bash
 ```
 
 ## Uninstall:
