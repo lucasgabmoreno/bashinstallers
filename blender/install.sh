@@ -88,7 +88,9 @@ if [ -e "$USER_PATH/blender/blender" ]; then
 sudo echo 'Blender installed in '$(date -d @$((`date +%s`-$START_TIME)) -u +%H:%M:%S)
 else
 echo 'Error'
-fi
+fi # if installed
 
-fi
+fi # if not uninstall
+
+fi # if not root
 
