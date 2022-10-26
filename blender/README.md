@@ -3,17 +3,12 @@
 
 ## Install:
 ```
-sudo rm -rf install.sh* uninstall.sh* 2> /dev/null
-GIT="https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/blender/"
-sudo wget "$GIT"install.sh "$GIT"uninstall.sh
-bash install.sh
+wget -q -O - https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/blender/install.sh | bash -s 'https://download.blender.org/release/Blender3.2/blender-3.2.2-linux-x64.tar.xz'
 ```
 
 ## Uninstall:
 ```
-sudo rm -rf uninstall.sh* 2> /dev/null
-sudo wget https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/blender/uninstall.sh
-bash uninstall.sh
+wget -q -O - https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/blender/install.sh | bash -s uninstall
 ```
 
 ## Software installed:

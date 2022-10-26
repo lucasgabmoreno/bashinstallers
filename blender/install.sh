@@ -1,5 +1,15 @@
 #!/bin/bash
 
+SOFT_URL=$1
+SOFT_PACKAGE=blender
+SOFT_KILL=blender
+SOFT_FLATPACK=org.blender.Blender
+DESK_PATH=$(xdg-user-dir DESKTOP) #/home/usernme/Dekstop/
+LAUNCHER_PATH="/usr/share/applications/blender.desktop"
+LAUNCHER_DESK=${LAUNCHER_PATH##*/} #soft.desktop
+HICOLOR="https://github.com/lucasgabmoreno/bashinstallers/raw/main/blender/blender.png"
+USER_PATH=$(xdg-user-dir)
+
 # Functions
 chmodown() {
 sudo chmod +x "$1"
@@ -18,47 +28,66 @@ else
 # Start count
 START_TIME=`date +%s` 
 
+
+# UNINSTALLER
 # Remove old versions and trash
-bash uninstall.sh noremove
+
+# Close
+kill $(pidof "$SOFT_KILL") 2> /dev/null
+
+# Uninstall
+sudo apt remove "$SOFT_PACKAGE"* -y 2> /dev/null
+sudo apt purge "$SOFT_PACKAGE"* -y 2> /dev/null
+sudo apt autoremove -y 2> /dev/null
+sudo flatpak uninstall "$SOFT_FLATPACK"* -y 2> /dev/null
+
+# Remove trash
+sudo rm -rf "/usr/share/icons/hicolor/128x128/apps/${HICOLOR##*/}" 2> /dev/null
+sudo rm -rf "~/blender" 2> /dev/null
+sudo rm -rf $LAUNCHER_PATH 2> /dev/null
+sudo rm -rf "~/.local/share/icons/blender.svg"  2> /dev/null
+sudo rm -rf "~/.config/blender" 2> /dev/null
+DESK_PATH=$(xdg-user-dir DESKTOP)
+sudo rm -rf "$DESK_PATH/blender.desktop" 2> /dev/null
+
+if [ ! -e ~/.local/share/applications/blender.desktop ]; then 
+echo "Software uninstalled!"
+else
+echo 'Error'
+fi
+
+# INSTALLER
+
+if [ "$SOFT_URL" != "uninstall" ]; then
 
 # Install
-sudo wget -t inf "https://github.com/lucasgabmoreno/bashinstallers/raw/main/blender/blender.png"
-sudo cp "blender.png" "/usr/share/icons/hicolor/128x128/apps/"
-BLENDER="blender-3.2.2-linux-x64.tar.xz"
-DOWN_PATH="https://download.blender.org/release/Blender3.2/$BLENDER"
+sudo wget -t inf "$HICOLOR"
+sudo cp ${HICOLOR##*/} "/usr/share/icons/hicolor/128x128/apps/"
+sudo rm -rf ${HICOLOR##*/} 
 
-mkdir_p ~/.local/share/applications/
-mkdir_p ~/.local/share/icons/
+sudo wget -t inf "$SOFT_URL"
 
-USER_PATH=$(xdg-user-dir)
-sudo wget -t inf "$DOWN_PATH"
-
-if [ ! -f "$BLENDER" ]; then
-    sudo curl -L -O "$DOWN_PATH"
+if [ ! -f ${SOFT_URL##*/} ]; then
+    sudo curl -L -O "$SOFT_URL"
 fi
 
-sudo mkdir ~/blender 
-sudo tar -Jxf "$BLENDER" --strip-components=1 -C ~/blender 
-sudo rm -rf "$BLENDER"
+sudo mkdir ~/"$SOFT_PACKAGE"
+sudo tar -Jxf ${SOFT_URL##*/} --strip-components=1 -C ~/"$SOFT_PACKAGE"
+sudo rm -rf ${SOFT_URL##*/}
 
 # Create desktop launcher
-sudo sed -i "s|Exec=blender|Exec=$USER_PATH/blender/blender|g" ~/blender/blender.desktop
-chmodown ~/blender/blender.desktop
-sudo cp ~/blender/blender.desktop ~/.local/share/applications/
-sudo cp ~/blender/blender.svg ~/.local/share/icons/
-chmodown ~/.local/share/applications/blender.desktop
+sudo sed -i "s|Exec=blender|Exec=$USER_PATH/blender/blender|g" ~/"$SOFT_PACKAGE"/"$LAUNCHER_DESK"
+chmodown ~/"$SOFT_PACKAGE"/"$LAUNCHER_DESK"
+sudo cp ~/"$SOFT_PACKAGE"/"$LAUNCHER_DESK" /usr/share/applications/
+sudo cp ~/blender/blender.svg /usr/share/icons/
+chmodown "$LAUNCHER_PATH"
 
-# Remove this insaller
-if [ ! -f .noremove ]; then 
-    sudo rm -rf install.sh uninstall.sh
-    sudo rm .rf "blender.png" 
-fi
 
 # Final message
-if [ -e $APP_PATH ]; then 
+if [ -e "$USER_PATH/blender/blender" ]; then 
 sudo echo 'Blender installed in '$(date -d @$((`date +%s`-$START_TIME)) -u +%H:%M:%S)
 else
-echo 'ERROR!!! Please copy the error message and paste them into https://github.com/lucasgabmoreno/bashinstallers/issues'
+echo 'Error'
 fi
 
 fi
