@@ -3,16 +3,12 @@
 
 ## Install
 ```
-sudo rm -rf install.sh* 2> /dev/null
-sudo wget 'https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/chrome/install.sh'
-bash install.sh 'https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb'
+wget -q -O - https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/chrome/install.sh | bash -s 'https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb'
 ```
 
 ## Uninstall
 ```
-sudo rm -rf install.sh* 2> /dev/null
-sudo wget 'https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/chrome/install.sh'
-bash install.sh uninstall
+wget -q -O - https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/chrome/install.sh | bash -s uninstall
 ```
 
 ## Software installed:
