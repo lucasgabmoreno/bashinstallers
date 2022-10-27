@@ -60,7 +60,6 @@ fi
 
 if [ "$SOFT_URL" != "uninstall" ]; then
 
-# Install
 sudo wget -t inf "$HICOLOR"
 sudo cp ${HICOLOR##*/} "/usr/share/icons/hicolor/128x128/apps/"
 sudo rm -rf ${HICOLOR##*/} 
