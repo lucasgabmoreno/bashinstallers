@@ -1,21 +1,16 @@
-# FreeFileSync 11.17
+# FreeFileSync
 <img src="preview.svg" width="200">
 
 ## Install:
 ```
-sudo rm -rf install.sh* uninstall.sh* 2> /dev/null
-GIT="https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/freefilesync/"
-sudo wget "$GIT"install.sh "$GIT"uninstall.sh
-bash install.sh
+wget -q -O - https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/freefilesync/install.sh | bash -s 'https://freefilesync.org/download/FreeFileSync_11.27_Linux.tar.gz'
 ```
-Keep on `/opt/FreeFileSync` or `/home/username/FreeFileSync` default folders.<br> 
+Keep on `/opt/FreeFileSync` default folders.<br> 
 
 
 ## Uninstall:
 ```
-sudo rm -rf uninstall.sh* 2> /dev/null
-sudo wget https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/freefilesync/uninstall.sh
-bash uninstall.sh
+wget -q -O - https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/freefilesync/install.sh | bash -s uninstall
 ```
 
 ## Software installed:
