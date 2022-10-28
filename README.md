@@ -1,7 +1,9 @@
 # Bash Installers
+## Drivers
+<img src="bcm43x/favicon.ico" style="width:16px">&nbsp; [Broadcom BCM43x](bcm43x)<br>
+
 ## Software
 <img src="blender/favicon.ico" style="width:16px">&nbsp; [Blender](blender)<br>
-<img src="bcm43x/favicon.ico" style="width:16px">&nbsp; [Broadcom BCM43x](bcm43x)<br>
 <img src="github/favicon.png" style="width:16px">&nbsp; [Github](github)<br>
 <img src="chrome/favicon-16x16.png" style="width:16px">&nbsp; [Google Chrome](chrome)<br>
 <img src="freefilesync/freefilesync.ico" style="width:16px">&nbsp; [FreeFileSync](freefilesync)<br>
