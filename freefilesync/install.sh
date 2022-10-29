@@ -73,7 +73,7 @@ fi
 
 sudo tar -xf "${SOFT_URL##*/}"
 sudo chmod +x FreeFileSync*.run
-sudo ./FreeFileSync*.run
+sudo ./$(ls FreeFileSync*.run)
 
 sudo rm -rf "${SOFT_URL##*/}" FreeFileSync*.run
 
