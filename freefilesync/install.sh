@@ -73,7 +73,11 @@ fi
 
 sudo tar -xf "${SOFT_URL##*/}"
 sudo chmod +x FreeFileSync*.run
-sudo ./$(ls FreeFileSync*.run)
+sudo ./FreeFileSync*.run
+
+# Wait installer to finish
+pid=$!
+wait $pid   
 
 sudo rm -rf "${SOFT_URL##*/}" FreeFileSync*.run
 
