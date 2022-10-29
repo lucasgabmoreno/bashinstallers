@@ -67,6 +67,10 @@ sudo mv "freefilesync.png" "/usr/share/icons/hicolor/128x128/apps/"
 sudo mv "realtimesync.png" "/usr/share/icons/hicolor/128x128/apps/"
 
 sudo wget -t inf "$SOFT_URL"
+if [ ! -f ${SOFT_URL##*/} ]; then
+    sudo curl -L -O "$SOFT_URL"
+fi
+
 sudo tar -xf "${SOFT_URL##*/}"
 sudo chmod +x FreeFileSync*.run
 sudo ./FreeFileSync*.run
