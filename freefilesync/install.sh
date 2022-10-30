@@ -73,9 +73,12 @@ if [ ! -f FreeFileSync*.run ]; then
     sudo tar -xf "${SOFT_URL##*/}"
 fi
 sudo chmod +x FreeFileSync*.run
-sudo ./FreeFileSync*.run &
-PID=$!
-wait $PID
+sudo ./FreeFileSync*.run 
+
+until [ -f $APP_PATH ]
+do
+     sleep 1
+done
 
 sudo rm -rf "${SOFT_URL##*/}" FreeFileSync*.run
 
@@ -88,6 +91,9 @@ chmodown "$APP_PATH"
 chmodown "$APP_PATH2"
 sudo cp /opt/FreeFileSync/Resources/FreeFileSync.png /usr/share/icons/freefilesync.png
 sudo cp /opt/FreeFileSync/Resources/RealTimeSync.png /usr/share/icons/realtimesync.png
+
+sudo rm -rf "$DESK_PATH/FreeFileSync.desktop" 2> /dev/null
+sudo rm -rf "$DESK_PATH/RealTimeSync.desktop" 2> /dev/null
 
 # Final message
 if [ -e $APP_PATH ]; then 
