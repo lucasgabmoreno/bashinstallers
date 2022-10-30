@@ -61,23 +61,21 @@ fi
 
 if [ "$SOFT_URL" != "uninstall" ]; then
 
-sudo wget -t inf "https://github.com/lucasgabmoreno/bashinstallers/raw/main/freefilesync/freefilesync.png"
-sudo wget -t inf "https://github.com/lucasgabmoreno/bashinstallers/raw/main/freefilesync/realtimesync.png"
+sudo wget -t inf "https://github.com/lucasgabmoreno/bashinstallers/raw/main/freefilesync/downloads/freefilesync.png"
+sudo wget -t inf "https://github.com/lucasgabmoreno/bashinstallers/raw/main/freefilesync/downloads/realtimesync.png"
 sudo mv "freefilesync.png" "/usr/share/icons/hicolor/128x128/apps/"
 sudo mv "realtimesync.png" "/usr/share/icons/hicolor/128x128/apps/"
 
 sudo wget -t inf "$SOFT_URL"
-if [ ! -f ${SOFT_URL##*/} ]; then
-    sudo curl -L -O "$SOFT_URL"
-fi
-
 sudo tar -xf "${SOFT_URL##*/}"
+if [ ! -f FreeFileSync*.run ]; then
+    sudo curl -L -O "$SOFT_URL"
+    sudo tar -xf "${SOFT_URL##*/}"
+fi
 sudo chmod +x FreeFileSync*.run
-sudo ./FreeFileSync*.run
-
-# Wait installer to finish
-pid=$!
-wait $pid   
+sudo ./FreeFileSync*.run &
+PID=$!
+wait $PID
 
 sudo rm -rf "${SOFT_URL##*/}" FreeFileSync*.run
 
