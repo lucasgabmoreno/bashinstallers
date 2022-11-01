@@ -3,7 +3,8 @@
 
 ## Install:
 ```
-wget -q -O - https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/blender/install.sh | bash -s 'https://download.blender.org/release/Blender3.3/blender-3.3.1-linux-x64.tar.xz'
+VERSION='https://download.blender.org/release/Blender3.3/blender-3.3.1-linux-x64.tar.xz'
+wget -q -O - https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/blender/install.sh | bash -s $VERSION
 ```
 
 ## Uninstall:

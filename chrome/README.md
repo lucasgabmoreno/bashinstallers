@@ -3,7 +3,8 @@
 
 ## Install
 ```
-wget -q -O - https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/chrome/install.sh | bash -s 'https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb'
+VERSION='https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb'
+wget -q -O - https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/chrome/install.sh | bash -s $VERSION
 ```
 
 ## Uninstall
