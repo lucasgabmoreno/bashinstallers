@@ -61,23 +61,24 @@ fi
 
 if [ "$SOFT_URL" != "uninstall" ]; then
 
-sudo wget -t inf "https://github.com/lucasgabmoreno/bashinstallers/raw/main/freefilesync/freefilesync.png"
-sudo wget -t inf "https://github.com/lucasgabmoreno/bashinstallers/raw/main/freefilesync/realtimesync.png"
+sudo wget -t inf "https://github.com/lucasgabmoreno/bashinstallers/raw/main/freefilesync/downloads/freefilesync.png"
+sudo wget -t inf "https://github.com/lucasgabmoreno/bashinstallers/raw/main/freefilesync/downloads/realtimesync.png"
 sudo mv "freefilesync.png" "/usr/share/icons/hicolor/128x128/apps/"
 sudo mv "realtimesync.png" "/usr/share/icons/hicolor/128x128/apps/"
 
 sudo wget -t inf "$SOFT_URL"
-if [ ! -f ${SOFT_URL##*/} ]; then
-    sudo curl -L -O "$SOFT_URL"
-fi
-
 sudo tar -xf "${SOFT_URL##*/}"
+if [ ! -f FreeFileSync*.run ]; then
+    sudo curl -L -O "$SOFT_URL"
+    sudo tar -xf "${SOFT_URL##*/}"
+fi
 sudo chmod +x FreeFileSync*.run
-sudo ./FreeFileSync*.run
+sudo ./FreeFileSync*.run 
 
-# Wait installer to finish
-pid=$!
-wait $pid   
+until [ -f $APP_PATH ]
+do
+     sleep 1
+done
 
 sudo rm -rf "${SOFT_URL##*/}" FreeFileSync*.run
 
@@ -90,6 +91,9 @@ chmodown "$APP_PATH"
 chmodown "$APP_PATH2"
 sudo cp /opt/FreeFileSync/Resources/FreeFileSync.png /usr/share/icons/freefilesync.png
 sudo cp /opt/FreeFileSync/Resources/RealTimeSync.png /usr/share/icons/realtimesync.png
+
+sudo rm -rf "$DESK_PATH/FreeFileSync.desktop" 2> /dev/null
+sudo rm -rf "$DESK_PATH/RealTimeSync.desktop" 2> /dev/null
 
 # Final message
 if [ -e $APP_PATH ]; then 
