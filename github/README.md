@@ -3,17 +3,13 @@
 
 ## Install:
 ```
-sudo rm -rf install.sh* uninstall.sh* 2> /dev/null
-GIT="https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/github/"
-sudo wget "$GIT"install.sh "$GIT"uninstall.sh
-bash install.sh
+VERSION='https://github.com/shiftkey/desktop/releases/download/release-3.0.6-linux1/GitHubDesktop-linux-3.0.6-linux1.deb'
+wget -q -O - https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/github/install.sh | bash -s $VERSION
 ```
 
 ## Uninstall:
 ```
-sudo rm -rf uninstall.sh* 2> /dev/null
-sudo wget https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/github/uninstall.sh
-bash uninstall.sh
+wget -q -O - https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/github/install.sh | bash -s uninstall
 ```
 
 ## Software installed:
