@@ -3,7 +3,7 @@
 
 ## Install:
 ```
-VERSION='https://github.com/shiftkey/desktop/releases/download/release-3.0.6-linux1/GitHubDesktop-linux-3.0.6-linux1.deb'
+VERSION='https://github.com/shiftkey/desktop/releases/download/release-3.1.1-linux1/GitHubDesktop-linux-3.1.1-linux1.deb'
 wget -q -O - https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/github/install.sh | bash -s $VERSION
 ```
 
