@@ -1,5 +1,7 @@
 #!/bin/bash
 
+sudo echo "Start"
+
 SOFT_URL=$1
 DESK_PATH=$(xdg-user-dir DESKTOP)
 APP_PATH=/usr/share/applications/FreeFileSync.desktop

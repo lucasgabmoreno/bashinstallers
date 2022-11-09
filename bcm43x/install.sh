@@ -1,5 +1,7 @@
 #!/bin/bash
 
+sudo echo "Start"
+
 SOFT_URL=$1
 
 if [ $USER == "root" ]; then

@@ -1,5 +1,7 @@
 #!/bin/bash
 
+sudo echo "Start"
+
 if [ $USER == "root" ]; then
 echo "Don't run this bash file as root user"
 else

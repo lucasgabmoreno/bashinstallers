@@ -1,5 +1,7 @@
 #!/bin/bash
 
+sudo echo "Start"
+
 # Functions
 chmodown() {
 sudo chmod +x "$1"

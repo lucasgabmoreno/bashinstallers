@@ -1,5 +1,7 @@
 #!/bin/bash
 
+sudo echo "Start"
+
 SOFT_URL=$1
 SOFT_PACKAGE=/opt/jd2/JDownloader2
 SOFT_KILL=java

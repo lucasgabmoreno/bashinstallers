@@ -1,6 +1,13 @@
 #!/bin/bash
 
-SOFT_URL=$1
+sudo echo "Start"
+
+# Github las version
+SOFT_URL_LAST=$(curl -Ls -o /dev/null -w %{url_effective} $1)
+SOFT_URL_PATH=${1%%/latest*}
+VERSION=${SOFT_URL_LAST##*release-}
+SOFT_URL="$SOFT_URL_PATH/download/release-$VERSION/GitHubDesktop-linux-$VERSION.deb"
+
 SOFT_PACKAGE=github-desktop
 SOFT_KILL=github-desktop
 DESK_PATH=$(xdg-user-dir DESKTOP) #/home/usernme/Dekstop/
