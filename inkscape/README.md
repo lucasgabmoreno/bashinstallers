@@ -8,17 +8,13 @@
 
 ## Install
 ```
-sudo rm -rf install.sh* uninstall.sh* 2> /dev/null
-GIT="https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/inkscape/"
-sudo wget "$GIT"install.sh "$GIT"uninstall.sh
-bash install.sh
+VERSION='https://inkscape.org/gallery/item/34672/Inkscape-9c6d41e-x86_64.AppImage'
+wget -q -O - https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/inkscape/install.sh | bash -s $VERSION
 ```
 
 ## Uninstall
 ```
-sudo rm -rf uninstall.sh* 2> /dev/null
-sudo wget https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/inkscape/uninstall.sh
-bash uninstall.sh
+wget -q -O - https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/inkscape/install.sh | bash -s uninstall
 ```
 
 ## Software installed
