@@ -5,13 +5,11 @@
 ```
 VERSION='https://updates.getmailspring.com/download?platform=linuxDeb'
 wget -q -O - https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/mailspring/install.sh | bash -s $VERSION
-
 ```
 
 ## Uninstall
 ```
 wget -q -O - https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/mailspring/install.sh | bash -s uninstall
-
 ```
 
 ## Software installed
