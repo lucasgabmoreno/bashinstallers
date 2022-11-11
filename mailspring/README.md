@@ -3,17 +3,15 @@
 
 ## Install
 ```
-sudo rm -rf install.sh* uninstall.sh* 2> /dev/null
-GIT="https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/mailspring/"
-sudo wget "$GIT"install.sh "$GIT"uninstall.sh
-bash install.sh
+VERSION='https://updates.getmailspring.com/download?platform=linuxDeb'
+wget -q -O - https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/mailspring/install.sh | bash -s $VERSION
+
 ```
 
 ## Uninstall
 ```
-sudo rm -rf uninstall.sh* 2> /dev/null
-sudo wget https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/mailspring/uninstall.sh
-bash uninstall.sh
+wget -q -O - https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/mailspring/install.sh | bash -s uninstall
+
 ```
 
 ## Software installed
