@@ -1,19 +1,16 @@
-# Jdownloader 2
+# Jdownloader
 <img src="preview.svg" width="200">
 
 ## Install
 ```
-sudo rm -rf install.sh* 2> /dev/null
-sudo wget 'https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/jdownloader/install.sh'
-bash install.sh 'https://mega.nz/#!bZtTnSDL!nVnOHuT8LMvvB9EuXp1nrEvjKjzQ6lSRShKkyGNRYPo'
+VERSION='https://mega.nz/#!bZtTnSDL!nVnOHuT8LMvvB9EuXp1nrEvjKjzQ6lSRShKkyGNRYPo'
+wget -q -O - https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/jdownloader/install.sh | bash -s $VERSION
 ```
 Keep on `/opt/jd2` default folder.
 
 ## Uninstall
 ```
-sudo rm -rf install.sh* 2> /dev/null
-sudo wget 'https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/jdownloader/install.sh'
-bash install.sh uninstall
+wget -q -O - https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/jdownloader/install.sh | bash -s uninstall
 ```
 
 ## Software installed:
