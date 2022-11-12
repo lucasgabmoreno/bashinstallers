@@ -7,6 +7,8 @@ SOFT_URL_LAST=$(curl -Ls -o /dev/null -w %{url_effective} $1)
 SOFT_URL_PATH=${1%%/latest*}
 VERSION=${SOFT_URL_LAST##*tag/}
 SOFT_URL="$SOFT_URL_PATH/download/$VERSION/mailspring-$VERSION-amd64.deb"
+else
+SOFT_URL=$1
 fi
 
 SOFT_PACKAGE=mailspring

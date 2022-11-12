@@ -7,6 +7,8 @@ SOFT_URL_LAST=$(curl -Ls -o /dev/null -w %{url_effective} $1)
 SOFT_URL_PATH=${1%%/latest*}
 VERSION=${SOFT_URL_LAST##*release-}
 SOFT_URL="$SOFT_URL_PATH/download/release-$VERSION/GitHubDesktop-linux-$VERSION.deb"
+else
+SOFT_URL=$1
 fi
 
 SOFT_PACKAGE=github-desktop
