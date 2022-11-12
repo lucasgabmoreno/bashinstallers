@@ -3,7 +3,7 @@
 
 ## Install
 ```
-VERSION='https://updates.getmailspring.com/download?platform=linuxDeb'
+VERSION='https://github.com/Foundry376/Mailspring/releases/latest/'
 wget -q -O - https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/mailspring/install.sh | bash -s $VERSION
 ```
 
