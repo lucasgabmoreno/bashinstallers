@@ -57,9 +57,9 @@ cd build
 cmake ..
 make
 sudo make install
-cd ..
-cd ..
-sudo rm -rf slingscold
+#cd ..
+#cd ..
+#sudo rm -rf slingscold
 
 # Final message
 if [ -e "$SOFT_PACKAGE" ]; then 
