@@ -3,16 +3,13 @@
 
 ## Install
 ```
-sudo rm -rf install.sh* 2> /dev/null
-sudo wget 'https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/zotero/install.sh'
-bash install.sh 'https://raw.githubusercontent.com/retorquere/zotero-deb/master/install.sh'
+VERSION='https://raw.githubusercontent.com/retorquere/zotero-deb/master/install.sh'
+wget -q -O - https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/zotero/install.sh | bash -s $VERSION
 ```
 
 ## Uninstall
 ```
-sudo rm -rf install.sh* 2> /dev/null
-sudo wget 'https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/zotero/install.sh'
-bash install.sh uninstall
+wget -q -O - https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/zotero/install.sh | bash -s uninstall
 ```
 
 ## Software installed

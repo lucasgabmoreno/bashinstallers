@@ -3,16 +3,13 @@
 
 ## Install
 ```
-sudo rm -rf install.sh* 2> /dev/null
-sudo wget 'https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/zoom/install.sh'
-bash install.sh 'https://zoom.us/client/latest/zoom_amd64.deb'
+VERSION='https://zoom.us/client/latest/zoom_amd64.deb'
+wget -q -O - https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/zoom/install.sh | bash -s $VERSION
 ```
 
 ## Uninstall
 ```
-sudo rm -rf install.sh* 2> /dev/null
-sudo wget 'https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/zoom/install.sh'
-bash install.sh uninstall
+wget -q -O - https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/zoom/install.sh | bash -s uninstall
 ```
 
 ## Software installed
