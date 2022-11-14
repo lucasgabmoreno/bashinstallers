@@ -33,7 +33,6 @@ kill $(pidof "$SOFT_KILL") 2> /dev/null
 sudo rm -rf "$DESK_PATH/$LAUNCHER_DESK" 2> /dev/null
 sudo rm -rf "$LAUNCHER_PATH"
 sudo rm -rf "$SOFT_PACKAGE"
-sudo updatedb
 
 # Final message
 if [ ! -e "$SOFT_PACKAGE" ]; then 
@@ -58,14 +57,12 @@ cd build
 cmake ..
 make
 sudo make install
-cd ..
-cd ..
-sudo rm -rf slingscold
-sudo updatedb
+sudo rm -rf "$(xdg-user-dir)/slingscold"
 
 # Final message
 if [ -e "$SOFT_PACKAGE" ]; then 
     sudo echo 'Software installed in '$(date -d @$((`date +%s`-$START_TIME)) -u +%H:%M:%S)
+    sudo echo  'If not working please reboot!'
 else
     echo 'Error!'
 fi # if installed
