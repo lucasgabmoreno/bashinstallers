@@ -33,6 +33,7 @@ kill $(pidof "$SOFT_KILL") 2> /dev/null
 sudo rm -rf "$DESK_PATH/$LAUNCHER_DESK" 2> /dev/null
 sudo rm -rf "$LAUNCHER_PATH"
 sudo rm -rf "$SOFT_PACKAGE"
+sudo updatedb
 
 # Final message
 if [ ! -e "$SOFT_PACKAGE" ]; then 
@@ -57,9 +58,10 @@ cd build
 cmake ..
 make
 sudo make install
-#cd ..
-#cd ..
-#sudo rm -rf slingscold
+cd ..
+cd ..
+sudo rm -rf slingscold
+sudo updatedb
 
 # Final message
 if [ -e "$SOFT_PACKAGE" ]; then 
