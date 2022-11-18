@@ -57,17 +57,12 @@ cd build
 cmake ..
 make
 sudo make install
+sudo rm -rf "$(xdg-user-dir)/slingscold"
 
 # Final message
-if [ -e "$SOFT_PACKAGE" ]; then
-
-cd ..
-cd ..
-sudo rm -rf slingscold
- 
+if [ -e "$SOFT_PACKAGE" ]; then 
     sudo echo 'Software installed in '$(date -d @$((`date +%s`-$START_TIME)) -u +%H:%M:%S)
-    sudo echo 'Please reboot!'
-    
+    sudo echo  'If not working please reboot!'
 else
     echo 'Error!'
 fi # if installed
