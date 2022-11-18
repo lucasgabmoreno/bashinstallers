@@ -57,13 +57,17 @@ cd build
 cmake ..
 make
 sudo make install
-#cd ..
-#cd ..
-#sudo rm -rf slingscold
 
 # Final message
-if [ -e "$SOFT_PACKAGE" ]; then 
+if [ -e "$SOFT_PACKAGE" ]; then
+
+cd ..
+cd ..
+sudo rm -rf slingscold
+ 
     sudo echo 'Software installed in '$(date -d @$((`date +%s`-$START_TIME)) -u +%H:%M:%S)
+    sudo echo 'Please reboot!'
+    
 else
     echo 'Error!'
 fi # if installed

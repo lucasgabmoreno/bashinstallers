@@ -11,8 +11,9 @@
 <img src="jdownloader/favicon.ico" style="width:16px">&nbsp; [JDownloader](jdownloader)<br>
 <img src="mailspring/mailspring.png" style="width:16px">&nbsp; [Mailspring](mailspring)<br>
 <img src="onlyoffice/favicon.png" style="width:16px">&nbsp; [OnlyOffice](onlyoffice)<br>
-<img src="slingscold/slingscold-32.svg" style="width:16px">&nbsp; [Slingscold](slingscold)<br>
 <img src="photogimp/photogimp.png" style="width:16px">&nbsp; [PhotoGIMP](photogimp)<br>
+<img src="slingscold/slingscold-32.svg" style="width:16px">&nbsp; [Slingscold](slingscold)<br>
+<img src="ulauncher/favicon.ico" style="width:16px">&nbsp; [Ulauncher](ulauncher)<br>
 <img src="zoom/favicon.ico" style="width:16px">&nbsp; [Zoom](zoom)<br>
 <img src="zotero/favicon.ico" style="width:16px">&nbsp; [Zotero](zotero)<br>
 
