@@ -13,7 +13,7 @@ wget -q -O - https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/mai
 ```
 
 ## Software installed:
-* github-desktop
+* ulauncher
 
 ## Thanks:
 * [Ulauncher](https://ulauncher.io/)
