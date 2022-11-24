@@ -41,6 +41,7 @@ sudo rm -rf "$DESK_PATH/$LAUNCHER_DESK" 2> /dev/null
 sudo rm -rf "$LAUNCHER_PATH"
 sudo rm -rf ~/.config/inkscape* 2> /dev/null
 sudo rm -rf ~/inkscape* 2> /dev/null
+sudo rm -rf ~/.var/app/org.inkscape* 2> /dev/null
 
 # Final message
 if [[ $(sudo apt list "$SOFT_PACKAGE"* --installed 2> /dev/null) != *"$SOFT_PACKAGE"* ]]; then
