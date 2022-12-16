@@ -8,7 +8,7 @@
 
 ## Install
 ```
-VERSION='https://inkscape.org/gallery/item/34672/Inkscape-9c6d41e-x86_64.AppImage'
+VERSION='https://inkscape.org/es/gallery/item/37359/Inkscape-b0a8486-x86_64.AppImage'
 wget -q -O - https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/inkscape/install.sh | bash -s $VERSION
 ```
 
