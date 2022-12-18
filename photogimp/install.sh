@@ -78,7 +78,7 @@ sudo rm -rf $SOFT_URL_DIR
 
 sudo cp "$LAUNCHER_PATH" "$LAUNCHER_DESK"
 chmodown "$LAUNCHER_DESK"
-sudo sed -i "s|/usr/bin/flatpak\ run\ --branch=stable\ --arch=x86_64\ --command=gimp-2.10\ --file-forwarding\ org.gimp.GIMP\ @@u\ %U\ @@|Exec=gimp-2.10\ %U|g" "$LAUNCHER_DESK"
+sudo sed -i "s|Exec=/usr/bin/flatpak\ run\ --branch=stable\ --arch=x86_64\ --command=gimp-2.10\ --file-forwarding\ org.gimp.GIMP\ @@u\ %U\ @@|Exec=gimp-2.10\ %U|g" "$LAUNCHER_DESK"
 sudo rm -rf "$LAUNCHER_PATH" 
 sudo mv "$LAUNCHER_DESK" /usr/share/applications/
 
