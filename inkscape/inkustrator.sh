@@ -25,4 +25,7 @@ sudo chown -R $USER:$USER inkustrator
 sudo cp -R "inkustrator/inkscape" ~/.config/
 sudo rm -rf inkustrator
 
+sudo chmod -R +x ~/.config/inkscape/
+sudo chown -R $USER:$USER ~/.config/inkscape/
+
 sudo echo 'Software installed in '$(date -d @$((`date +%s`-$START_TIME)) -u +%H:%M:%S)
