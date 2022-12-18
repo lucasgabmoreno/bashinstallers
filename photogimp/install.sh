@@ -2,7 +2,7 @@
 
 sudo echo "Start"
 
-SOFT_URL='https://github.com/Diolinux/PhotoGIMP/releases/download/1.1/PhotoGIMP.by.Diolinux.v2020.1.for.Flatpak.zip'
+SOFT_URL=$1
 SOFT_URL_ZIP=${SOFT_URL##*/}
 SOFT_URL_DIR=${SOFT_URL_ZIP%%.zip}
 
