@@ -43,8 +43,7 @@ sudo flatpak uninstall "$SOFT_FLATPACK"* -y 2> /dev/null
 sudo rm -rf "$DESK_PATH/$LAUNCHER_DESK" 2> /dev/null
 sudo rm -rf "$LAUNCHER_PATH"
 sudo rm -rf ~/.config/GIMP* 2> /dev/null
-sudo rm -rf "/usr/share/icons/photogimp.png" 2> /dev/null
-sudo rm -rf "/usr/share/icons/hicolor/128x128/apps/photogimp.png" 2> /dev/null
+sudo find /usr/share/icons/ -type f -name "photogimp.png" -delete
 
 # Final message
 if [[ $(sudo apt list "$SOFT_PACKAGE"* --installed 2> /dev/null) != *"$SOFT_PACKAGE"* ]]; then
@@ -65,26 +64,23 @@ sudo wget -t inf $SOFT_URL
 sudo unzip $SOFT_URL_ZIP
 sudo rm -rf $SOFT_URL_ZIP
 sudo mkdir -p ~/.config/GIMP/2.10
+
 sudo cp -R "$SOFT_URL_DIR/.var/app/org.gimp.GIMP/config/GIMP/2.10/"* ~/.config/GIMP/2.10/
 sudo chmod -R +x ~/.config/GIMP/2.10
 sudo chown -R $USER:$USER ~/.config/GIMP/2.10
-sudo rm -rf $SOFT_URL_DIR
 
-# Desktop launcher
-sudo wget -t inf "https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/photogimp/photogimp.png"
-sudo cp "photogimp.png" "/usr/share/icons"
-sudo cp "photogimp.png" "/usr/share/icons/hicolor/128x128/apps"
-sudo rm -rf "photogimp.png"
+sudo cp -R "$SOFT_URL_DIR/.local/share/applications/org.gimp.GIMP.desktop" "$LAUNCHER_PATH"
+sudo chmod -R +x "$LAUNCHER_PATH"
+sudo chown -R $USER:$USER "$LAUNCHER_PATH"
+
+sudo cp -R "$SOFT_URL_DIR/.local/share/icons/hicolor/"* "/usr/share/icons/hicolor/"
+sudo rm -rf $SOFT_URL_DIR
 
 sudo cp "$LAUNCHER_PATH" "$LAUNCHER_DESK"
 chmodown "$LAUNCHER_DESK"
-sudo sed -i "s|Name=GNU\ Image\ Manipulation\ Program|Name=PhotoGIMP|g" "$LAUNCHER_DESK"
-sudo sed -i "s|Icon=gimp|Icon=photogimp|g" "$LAUNCHER_DESK"
+sudo sed -i "s|/usr/bin/flatpak\ run\ --branch=stable\ --arch=x86_64\ --command=gimp-2.10\ --file-forwarding\ org.gimp.GIMP\ @@u\ %U\ @@|Exec=gimp-2.10\ %U|g" "$LAUNCHER_DESK"
 sudo rm -rf "$LAUNCHER_PATH" 
 sudo mv "$LAUNCHER_DESK" /usr/share/applications/
-
-# Remove trash
-sudo rm -rf ~/.local/share/applications/Desktopeditors* 2> /dev/null
 
 # Final message
 if [[ $(sudo apt list "$SOFT_PACKAGE"* --installed 2> /dev/null) == *"$SOFT_PACKAGE"* ]]; then 
