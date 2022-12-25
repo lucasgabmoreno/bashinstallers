@@ -2,19 +2,6 @@
 
 sudo echo "Start"
 
-SOFT_URL=$1
-SOFT_PACKAGE='/usr/local/bin/slingscold'
-SOFT_KILL=slingscold
-DESK_PATH=$(xdg-user-dir DESKTOP) #/home/usernme/Dekstop/
-LAUNCHER_PATH="/usr/share/applications/slingscold.desktop"
-LAUNCHER_DESK=${LAUNCHER_PATH##*/} #soft.desktop
-
-# Permissions
-chmodown() {
-sudo chmod +x "$1"
-sudo chown $USER:$USER "$1"
-}
-
 if [ $USER == "root" ]; then
 echo "Don't run as root user"
 else
@@ -22,50 +9,44 @@ else
 # Start count
 START_TIME=`date +%s` 
 
-
 # UNINSTALLER
 # Remove old versions and trash
 
-# Close
-kill $(pidof "$SOFT_KILL") 2> /dev/null
-
 # Remove trash
-sudo rm -rf "$DESK_PATH/$LAUNCHER_DESK" 2> /dev/null
-sudo rm -rf "$LAUNCHER_PATH"
-sudo rm -rf "$SOFT_PACKAGE"
+sudo apt remove ttf-mscorefonts-installer -y 2> /dev/null
+sudo apt purge ttf-mscorefonts-installer -y 2> /dev/null
+sudo apt autoremove -y 2> /dev/null
+sudo rm -rf /usr/share/fonts/truetype/msttcorefonts 2> /dev/null
+sudo rm -rf /home/lucasgabmoreno/.fonts/clearTypeFonts 2> /dev/null
+sudo rm -rf /home/lucasgabmoreno/.fonts/other-essential-fonts 2> /dev/null
+sudo rm -rf /home/lucasgabmoreno/.fonts/segoeUI 2> /dev/null
+sudo rm -rf /home/lucasgabmoreno/.fonts/tahoma 2> /dev/null
 
 # Final message
-if [ ! -e "$SOFT_PACKAGE" ]; then 
-    echo "Software uninstalled!"
-else
-    echo 'Error!'
-fi
+echo "Software uninstalled!"
 
 # INSTALLER
-
 if [ "$SOFT_URL" != "uninstall" ]; then
 
-# Dependencies
-sudo apt-get install cmake libgee-0.8-dev libgnome-menu-3-dev cdbs valac libvala-*-dev libglib2.0-dev libwnck-3-dev libgtk-3-dev -y
 
-# Final fixes
-sudo apt --fix-broken install -y
+# Times New Roma - Arial Black - Arial - Comic Sans MS - Courier New - Impact - Verdana
+sudo apt install ttf-mscorefonts-installer -y
 
-git clone $SOFT_URL
-cd slingscold
-cd build
-cmake ..
-make
-sudo make install
-sudo rm -rf "$(xdg-user-dir)/slingscold"
+# Calibri - Cambria - Candara - Consolas - Constantia - Corbel
+wget -q -O - https://gist.githubusercontent.com/Blastoise/72e10b8af5ca359772ee64b6dba33c91/raw/2d7ab3caa27faa61beca9fbf7d3aca6ce9a25916/clearType.sh | bash
+
+# Tahoma
+wget -q -O - https://gist.githubusercontent.com/Blastoise/b74e06f739610c4a867cf94b27637a56/raw/96926e732a38d3da860624114990121d71c08ea1/tahoma.sh | bash
+
+# Segoe-UI
+wget -q -O - https://gist.githubusercontent.com/Blastoise/64ba4acc55047a53b680c1b3072dd985/raw/6bdf69384da4783cc6dafcb51d281cb3ddcb7ca0/segoeUI.sh | bash
+
+# Mtextra - Symbol - Webdings - Wingding - Wingdng2 - Wingdng3
+wget -q -O - https://gist.githubusercontent.com/Blastoise/d959d3196fb3937b36969013d96740e0/raw/429d8882b7c34e5dbd7b9cbc9d0079de5bd9e3aa/otherFonts.sh | bash
+
 
 # Final message
-if [ -e "$SOFT_PACKAGE" ]; then 
-    sudo echo 'Software installed in '$(date -d @$((`date +%s`-$START_TIME)) -u +%H:%M:%S)
-    sudo echo  'If not working please reboot!'
-else
-    echo 'Error!'
-fi # if installed
+sudo echo 'Software installed in '$(date -d @$((`date +%s`-$START_TIME)) -u +%H:%M:%S)
 
 fi # if not uninstall
 fi # if not root
