@@ -25,7 +25,7 @@ wget -q -O - https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/mai
 * Georgia
 * Impact
 * MT Extra
-* SEgoe UI
+* Segoe UI
 * Symbol
 * Tahoma
 * Times New Roman
