@@ -25,5 +25,5 @@ wget -q -O - https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/mai
 * libgtk-3-dev
 
 ## Thanks
-* [OnlyOffice](https://www.onlyoffice.com/es/)
+* [DEB Libre](https://github.com/libredeb)
 * [Papirus](https://github.com/PapirusDevelopmentTeam)
