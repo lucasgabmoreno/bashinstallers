@@ -3,12 +3,12 @@
 
 ## Install
 ```
-wget -q -O - https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/slingscold/install.sh | bash
+wget -q -O - https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/msfonts/install.sh | bash
 ```
 
 ## Uninstall
 ```
-wget -q -O - https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/slingscold/install.sh | bash -s uninstall
+wget -q -O - https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/msfonts/install.sh | bash -s uninstall
 ```
 
 ## Software installed
