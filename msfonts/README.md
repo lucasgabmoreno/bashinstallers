@@ -11,7 +11,7 @@ wget -q -O - https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/mai
 wget -q -O - https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/msfonts/install.sh | bash -s uninstall
 ```
 
-## Software installed
+## Fonts installed
 * Andale Mono
 * Arial
 * Calibri
