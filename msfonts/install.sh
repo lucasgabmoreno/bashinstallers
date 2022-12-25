@@ -15,6 +15,7 @@ START_TIME=`date +%s`
 # Remove old versions and trash
 
 # Remove trash
+sudo dpkg --configure -a
 sudo apt remove ttf-mscorefonts-installer -y 2> /dev/null
 sudo apt purge ttf-mscorefonts-installer -y 2> /dev/null
 sudo apt autoremove -y 2> /dev/null
