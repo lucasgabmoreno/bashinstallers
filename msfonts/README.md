@@ -36,6 +36,7 @@ wget -q -O - https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/mai
 
 ## Thanks
 * [Microsoft](https://learn.microsoft.com/en-us/typography/font-list/)
+* [Noa](https://corefonts.sourceforge.net/)
 * [Ashutosh Kumar](https://github.com/Blastoise)
 * [Papirus](https://github.com/PapirusDevelopmentTeam)
 
