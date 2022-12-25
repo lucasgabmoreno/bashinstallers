@@ -1,5 +1,7 @@
 #!/bin/bash
 
+SOFT_URL=$1
+
 sudo echo "Start"
 
 if [ $USER == "root" ]; then
