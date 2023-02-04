@@ -18,4 +18,4 @@ wget -q -O - https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/mai
 
 ## Thanks:
 * [sgan81r](https://github.com/sgan81/apfs-fuse)
-
+* [devgregw](https://github.com/sgan81/apfs-fuse/issues/149)
