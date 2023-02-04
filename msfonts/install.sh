@@ -43,11 +43,6 @@ wget -q -O - https://gist.githubusercontent.com/Blastoise/64ba4acc55047a53b680c1
 # Mtextra - Symbol - Webdings - Wingding - Wingdng2 - Wingdng3
 wget -q -O - https://gist.githubusercontent.com/Blastoise/d959d3196fb3937b36969013d96740e0/raw/429d8882b7c34e5dbd7b9cbc9d0079de5bd9e3aa/otherFonts.sh | bash
 
-sudo apt update && sudo apt upgrade
-
-# Times New Roma - Arial Black - Arial - Comic Sans MS - Courier New - Impact - Verdana
-sudo apt install ttf-mscorefonts-installer -y
-
 # Final message
 sudo echo 'Software installed in '$(date -d @$((`date +%s`-$START_TIME)) -u +%H:%M:%S)
 
