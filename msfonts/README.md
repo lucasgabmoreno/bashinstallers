@@ -1,4 +1,6 @@
 # Microsoft Fonts
+This is a complement for ttf-mscorefonts-installer
+
 <img src="preview.svg" width="200">
 
 ## Install
@@ -12,27 +14,20 @@ wget -q -O - https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/mai
 ```
 
 ## Fonts installed
-* Andale Mono
-* Arial
 * Calibri
 * Cambria
 * Candara
-* Comic Sans
 * Consolas
 * Constantia
 * Corbel
-* Courier New
-* Georgia
-* Impact
-* MT Extra
-* Segoe UI
-* Symbol
 * Tahoma
-* Times New Roman
-* Trebuchet
-* Verdana
+* Segoe-UI
+* Mtextra
+* Symbol
 * Webdings
-* Wingdings
+* Wingding
+* Wingdng2
+* Wingdng3
 
 ## Thanks
 * [Microsoft](https://learn.microsoft.com/en-us/typography/font-list/)
