@@ -1,5 +1,6 @@
 # Bash Installers
 ## Drivers
+<img src="apfs/favicon.ico" style="width:16px">&nbsp; [APFS FUSE](afps)<br>
 <img src="bcm43x/favicon.ico" style="width:16px">&nbsp; [Broadcom BCM43x](bcm43x)<br>
 
 ## Software
