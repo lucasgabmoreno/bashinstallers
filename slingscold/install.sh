@@ -46,7 +46,7 @@ fi
 if [ "$SOFT_URL" != "uninstall" ]; then
 
 # Dependencies
-sudo apt-get install cmake libgee-0.8-dev libgnome-menu-3-dev cdbs valac libvala-*-dev libglib2.0-dev libwnck-3-dev libgtk-3-dev git -y
+sudo apt-get install cmake libgee-0.8-dev libgnome-menu-3-dev cdbs valac libvala-*-dev libglib2.0-dev libwnck-3-dev libgtk-3-dev git build-essential -y
 
 # Final fixes
 sudo apt --fix-broken install -y
