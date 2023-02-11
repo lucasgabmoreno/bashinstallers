@@ -71,15 +71,8 @@ fi
 
 if [ "$SOFT_URL" != "uninstall" ]; then
 
-if [[ $(gcc --version) == *Debian* ]]; then
-wget_dpkg_rm "$SOFT_URL"
-fi
 
-if [[ $(gcc --version) == *Ubuntu* ]]; then
-sudo add-apt-repository ppa:agornostal/ulauncher -y
-sudo apt update 
-sudo apt install ulauncher -y
-fi
+wget_dpkg_rm "$SOFT_URL"
 
 # Final fixes
 sudo apt --fix-broken install -y
