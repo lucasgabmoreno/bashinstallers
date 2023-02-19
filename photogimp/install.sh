@@ -4,7 +4,7 @@ sudo echo "Start"
 
 SOFT_URL=$1
 SOFT_URL_ZIP=${SOFT_URL##*/}
-SOFT_URL_DIR=${SOFT_URL_ZIP%%.zip}
+SOFT_URL_DIR=${SOFT_URL_ZIP%%-master.zip}
 
 SOFT_PACKAGE=gimp
 SOFT_KILL=gimp
