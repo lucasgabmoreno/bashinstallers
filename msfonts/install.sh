@@ -12,14 +12,7 @@ else
 START_TIME=`date +%s` 
 
 # UNINSTALLER
-# Remove old versions and trash
-
-# Remove trash
-sudo dpkg --configure -a
-sudo apt remove ttf-mscorefonts-installer -y 2> /dev/null
-sudo apt purge ttf-mscorefonts-installer -y 2> /dev/null
-sudo apt autoremove -y 2> /dev/null
-sudo rm -rf /usr/share/fonts/truetype/msttcorefonts 2> /dev/null
+# Remove
 sudo rm -rf /home/lucasgabmoreno/.fonts/clearTypeFonts 2> /dev/null
 sudo rm -rf /home/lucasgabmoreno/.fonts/other-essential-fonts 2> /dev/null
 sudo rm -rf /home/lucasgabmoreno/.fonts/segoeUI 2> /dev/null
