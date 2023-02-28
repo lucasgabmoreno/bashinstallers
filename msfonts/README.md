@@ -22,7 +22,7 @@ wget -q -O - https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/mai
 * Corbel
 * Tahoma
 * Segoe-UI
-* Mtextra
+* MT Extra
 * Symbol
 * Webdings
 * Wingding
