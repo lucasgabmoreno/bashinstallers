@@ -55,6 +55,7 @@ sudo rm -rf "$LAUNCHER_PATH"
 sudo rm -rf ~/.config/onlyoffice* 2> /dev/null
 sudo rm -rf ~/.local/share/onlyoffice* 2> /dev/null
 sudo rm -rf ~/.local/share/applications/Desktopeditors* 2> /dev/null
+sudo rm -rf /usr/share/icons/hicolor/onlyoffice-desktopeditors.png 2> /dev/null
 
 # Final message
 if [[ $(sudo apt list "$SOFT_PACKAGE"* --installed 2> /dev/null) != *"$SOFT_PACKAGE"* ]]; then
@@ -78,6 +79,7 @@ wget_dpkg_rm "$SOFT_URL"
 sudo apt --fix-broken install -y
 
 # Desktop launcher
+sudo cp /usr/share/icons/hicolor/128x128/apps/onlyoffice-desktopeditors.png /usr/share/icons/hicolor/onlyoffice-desktopeditors.png
 sudo cp "$LAUNCHER_PATH" "$LAUNCHER_DESK"
 chmodown "$LAUNCHER_DESK"
 LAUNCHER_DESK_STR=$(paste "$LAUNCHER_DESK")
@@ -90,7 +92,6 @@ sudo mv "$LAUNCHER_DESK" /usr/share/applications/
 
 # Remove trash
 sudo rm -rf ~/.local/share/applications/Desktopeditors* 2> /dev/null
-
 
 # Final message
 if [[ $(sudo apt list "$SOFT_PACKAGE"* --installed 2> /dev/null) == *"$SOFT_PACKAGE"* ]]; then 
