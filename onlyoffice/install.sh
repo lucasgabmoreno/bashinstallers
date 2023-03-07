@@ -67,12 +67,12 @@ fi
 
 if [ "$SOFT_URL" != "uninstall" ]; then
 
-wget_dpkg_rm "$SOFT_URL"
-
-# ChromeOS Fixes
+# Dependencies
 if [[ $(sudo apt list libnss3 --installed 2> /dev/null) != *"libnss3"* ]]; then 
     sudo apt install libnss3-dev libgdk-pixbuf2.0-dev libgtk-3-dev libxss-dev -y
 fi
+
+wget_dpkg_rm "$SOFT_URL"
 
 # Final fixes
 sudo apt --fix-broken install -y
