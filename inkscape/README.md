@@ -11,7 +11,7 @@
 VERSION='https://inkscape.org/es/gallery/item/37359/Inkscape-b0a8486-x86_64.AppImage'
 wget -q -O - https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/inkscape/install.sh | bash -s $VERSION
 ```
-Inkustrator theme for mimic Adobe Illustrator 
+Apply [Inkustrator](https://github.com/lucasgabmoreno/inkustrator) theme for mimic Adobe Illustrator:
 ```
 VERSION='https://github.com/lucasgabmoreno/inkustrator/releases/latest/'
 wget -q -O - https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/inkscape/inkustrator.sh | bash -s $VERSION
