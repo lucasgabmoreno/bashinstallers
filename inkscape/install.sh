@@ -54,6 +54,7 @@ fi
 
 if [ "$SOFT_URL" != "uninstall" ]; then
 
+sudo apt install gcc -y
 
 if [[ $(gcc --version) == *Ubuntu* ]]; then
 sudo add-apt-repository ppa:inkscape.dev/stable -y
