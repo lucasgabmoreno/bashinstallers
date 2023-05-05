@@ -30,7 +30,7 @@ SOFT_URL="$1"
 SOFT_DEB=${SOFT_URL##*/}
 sudo rm -rf "$SOFT_DEB"* 2> /dev/null
 sudo wget -t inf "$SOFT_URL"
-if [ ! -f "$SOFT_DEB" ]; then curl -L -O "$SOFT_URL"; fi
+if [ ! -f "$SOFT_DEB" ]; then sudo curl -L -O "$SOFT_URL"; fi
 sudo mv "$SOFT_DEB" inst.deb
 chmodown inst.deb
 sudo dpkg -i inst.deb
