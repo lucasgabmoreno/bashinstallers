@@ -6,7 +6,9 @@ if [ "$1" != "uninstall" ]; then
 SOFT_URL_LAST=$(curl -Ls -o /dev/null -w %{url_effective} $1)
 SOFT_URL_PATH=${1%%/latest*}
 VERSION=${SOFT_URL_LAST##*tag/}
+echo "Version: $VERSION"
 SOFT_URL="$SOFT_URL_PATH/download/$VERSION/mailspring-$VERSION-amd64.deb"
+echo "Download URL: $SOFT_URL"
 else
 SOFT_URL=$1
 fi
