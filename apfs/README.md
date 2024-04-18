@@ -24,10 +24,7 @@ sudo rm -rf /usr/bin/apfs-* 2> /dev/null
 sudo rm -rf /usr/bin/apfsutil 2> /dev/null
 ```
 
-## Software installed:
-* apfs-fuse
-* apfsutil
 
-## Thanks:
+## Credits:
 * [sgan81r](https://github.com/sgan81/apfs-fuse)
 * [devgregw](https://github.com/sgan81/apfs-fuse/issues/149)
