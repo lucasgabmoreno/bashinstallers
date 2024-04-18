@@ -3,13 +3,25 @@
 
 ## Install:
 ```
-VERSION='https://github.com/sgan81/apfs-fuse.git'
-wget -q -O - https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/apfs/install.sh | bash -s $VERSION
+sudo apt install fuse libfuse3-dev bzip2 libbz2-dev cmake gcc g++ git libattr1-dev zlib1g-dev -y
+sudo apt --fix-broken install -y
+git clone https://github.com/sgan81/apfs-fuse.git
+cd apfs-fuse
+git submodule init
+git submodule update
+mkdir build
+cd build
+cmake ..
+make
+sudo cp apfs-* /usr/bin/
+sudo cp apfsutil /usr/bin/
+sudo rm -rf "$(xdg-user-dir)/apfs-fuse"
 ```
 
 ## Uninstall:
 ```
-wget -q -O - https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/apfs/install.sh | bash -s uninstall
+sudo rm -rf /usr/bin/apfs-* 2> /dev/null
+sudo rm -rf /usr/bin/apfsutil 2> /dev/null
 ```
 
 ## Software installed:
