@@ -27,10 +27,8 @@ else
     sudo mv $BT_FW_HCD /lib/firmware/brcm/$BT_FW_HCD
     sudo rm -rf $BT_FW_HCD
     if [[ $(sudo apt list --installed broadcom*  2> /dev/null) == *"broadcom"* ]]; then 
-        sudo echo 'Installed in '$(date -d @$((`date +%s`-$START_TIME)) -u +%H:%M:%S)
         sudo echo "Please reboot!"    
     elif [[ $(sudo apt list --installed bcmwl*  2> /dev/null) == *"bcmwl"* ]]; then
-        sudo echo 'Installed in '$(date -d @$((`date +%s`-$START_TIME)) -u +%H:%M:%S)
         sudo echo "Please reboot!"
     else
         echo 'Error!'
