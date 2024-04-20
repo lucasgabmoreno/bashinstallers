@@ -15,7 +15,7 @@ cmake ..
 make
 sudo cp apfs-* /usr/bin/
 sudo cp apfsutil /usr/bin/
-ccd $HOME
+cd $HOME
 sudo rm -rf "$(xdg-user-dir)/apfs-fuse"
 ```
 
