@@ -29,7 +29,7 @@ sudo rm -rf "$DESK_PATH/blender.desktop" 2> /dev/null
 ```
 
 
-## Credits:
+## Credits
 * [Blender](https://www.blender.org/)
 * [Ubuntu Hand Book](https://ubuntuhandbook.org/index.php/2021/12/blender-3-0-released-install-tarball/)
 * [Papirus](https://github.com/PapirusDevelopmentTeam)
