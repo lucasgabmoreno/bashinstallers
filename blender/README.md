@@ -1,18 +1,18 @@
 # Blender
 <img src="preview.svg" width="200">
 
-## Install .tar.xz:
+## Install .tar.xz
 ```
 VERSION='https://download.blender.org/release/Blender3.3/blender-3.3.1-linux-x64.tar.xz'
 wget -q -O - https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/blender/install.sh | bash -s $VERSION
 ```
 
-## Install flatpak:
+## Install flatpak
 ```
 flatpak install flathub org.blender.Blender
 ```
 
-## Uninstall:
+## Uninstall
 ```
 DESK_PATH=$(xdg-user-dir DESKTOP)
 kill $(pidof blender) 2> /dev/null
