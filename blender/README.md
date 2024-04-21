@@ -13,9 +13,7 @@ USER_PATH=$(xdg-user-dir)
 wget -t inf "https://github.com/lucasgabmoreno/bashinstallers/raw/main/blender/blender.png"
 sudo mv "blender.png" "/usr/share/icons/hicolor/128x128/apps"
 wget -t inf "$SOFT_URL"
-if [[ ! -f ${SOFT_URL##*/} ]]; then
-    curl -L -O "$SOFT_URL"
-fi
+if [[ ! -f ${SOFT_URL##*/} ]]; then curl -L -O "$SOFT_URL"; fi
 mkdir ~/Blender
 tar -Jxf ${SOFT_URL##*/} --strip-components=1 -C ~/Blender
 rm -rf ${SOFT_URL##*/}
@@ -28,9 +26,7 @@ USER_PATH=$(xdg-user-dir)
 wget -t inf "https://github.com/lucasgabmoreno/bashinstallers/raw/main/blender/blender.png"
 sudo mv "blender.png" "/usr/share/icons/hicolor/128x128/apps"
 wget -t inf "$SOFT_URL"
-if [[ ! -f ${SOFT_URL##*/} ]]; then
-    curl -L -O "$SOFT_URL"
-fi
+if [[ ! -f ${SOFT_URL##*/} ]]; then curl -L -O "$SOFT_URL"; fi
 mkdir ~/Blender
 tar -Jxf ${SOFT_URL##*/} --strip-components=1 -C ~/Blender
 rm -rf ${SOFT_URL##*/}
