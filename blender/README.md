@@ -1,6 +1,11 @@
 # Blender
 <img src="preview.svg" width="200">
 
+## Install flatpak
+```
+flatpak install flathub org.blender.Blender
+```
+
 ## Install .tar.xz
 ```
 SOFT_URL="https://download.blender.org/release/Blender4.1/blender-4.1.0-linux-x64.tar.xz"
@@ -34,11 +39,6 @@ chmod +x ~/Blender/blender.desktop
 cp ~/Blender/blender.desktop "$USER_PATH/.local/share/applications"
 sudo cp ~/Blender/blender.desktop /usr/share/applications
 sudo cp ~/Blender/blender.svg /usr/share/icons/
-```
-
-## Install flatpak
-```
-flatpak install flathub org.blender.Blender
 ```
 
 ## Uninstall
