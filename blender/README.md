@@ -19,7 +19,7 @@ kill $(pidof blender) 2> /dev/null
 sudo apt remove blender* -y 2> /dev/null
 sudo apt purge blender* -y 2> /dev/null
 sudo apt autoremove -y 2> /dev/null
-sudo flatpak uninstall org.blender.Blender* -y 2> /dev/null
+sudo flatpak uninstall org.blender.Blender -y 2> /dev/null
 sudo rm -rf "/usr/share/icons/hicolor/128x128/apps/blender.png" 2> /dev/null
 sudo rm -rf "/usr/share/icons/blender.svg"  2> /dev/null
 sudo rm -rf ~/Blender 2> /dev/null
