@@ -21,19 +21,6 @@ sed -i "s|Exec=blender|Exec=$USER_PATH/Blender/blender|g" ~/Blender/blender.desk
 chmod +x ~/Blender/blender.desktop
 cp ~/Blender/blender.desktop "$USER_PATH/.local/share/applications"
 sudo cp ~/Blender/blender.desktop /usr/share/applications
-sudo cp ~/Blender/blender.svg /usr/share/icons/SOFT_URL="https://download.blender.org/release/Blender4.1/blender-4.1.0-linux-x64.tar.xz"
-USER_PATH=$(xdg-user-dir)
-wget -t inf "https://github.com/lucasgabmoreno/bashinstallers/raw/main/blender/blender.png"
-sudo mv "blender.png" "/usr/share/icons/hicolor/128x128/apps"
-wget -t inf "$SOFT_URL"
-if [[ ! -f ${SOFT_URL##*/} ]]; then curl -L -O "$SOFT_URL"; fi
-mkdir ~/Blender
-tar -Jxf ${SOFT_URL##*/} --strip-components=1 -C ~/Blender
-rm -rf ${SOFT_URL##*/}
-sed -i "s|Exec=blender|Exec=$USER_PATH/Blender/blender|g" ~/Blender/blender.desktop
-chmod +x ~/Blender/blender.desktop
-cp ~/Blender/blender.desktop "$USER_PATH/.local/share/applications"
-sudo cp ~/Blender/blender.desktop /usr/share/applications
 sudo cp ~/Blender/blender.svg /usr/share/icons/
 ```
 
