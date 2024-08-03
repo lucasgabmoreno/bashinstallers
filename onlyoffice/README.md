@@ -10,7 +10,18 @@ wget -q -O - https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/mai
 ## Install flatpak
 ```
 flatpak install flathub org.onlyoffice.desktopeditors
-
+LAUNCHER_PATH="/var/lib/flatpak/app/org.onlyoffice.desktopeditors/current/active/export/share/applications//org.onlyoffice.desktopeditors.desktop"
+LAUNCHER_DESK=${LAUNCHER_PATH##*/}
+sudo cp "$LAUNCHER_PATH" "$LAUNCHER_DESK"
+sudo chmod +x "$LAUNCHER_DESK"
+sudo chown $USER:$USER "$LAUNCHER_DESK"
+sed -i '/StartupWMClass=onlyoffice/d' "$LAUNCHER_DESK"
+LAUNCHER_DESK_STR=$(paste "$LAUNCHER_DESK")
+if [[ "$LAUNCHER_DESK_STR" != *"StartupWMClass"* ]]; then
+    sudo sed -i '2 i\StartupWMClass=DesktopEditors' "$LAUNCHER_DESK"
+fi
+sudo rm -rf "$LAUNCHER_PATH" 
+sudo mv "$LAUNCHER_DESK" /var/lib/flatpak/app/org.onlyoffice.desktopeditors/current/active/export/share/applications/
 ```
 
 ## Uninstall
