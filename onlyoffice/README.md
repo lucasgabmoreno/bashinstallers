@@ -1,10 +1,16 @@
 # OnlyOffice
 <img src="preview.svg" width="200">
 
-## Install
+## Install .deb
 ```
 VERSION='https://download.onlyoffice.com/install/desktop/editors/linux/onlyoffice-desktopeditors_amd64.deb'
 wget -q -O - https://raw.githubusercontent.com/lucasgabmoreno/bashinstallers/main/onlyoffice/install.sh | bash -s $VERSION
+```
+
+## Install flatpak
+```
+flatpak install flathub org.onlyoffice.desktopeditors
+
 ```
 
 ## Uninstall
