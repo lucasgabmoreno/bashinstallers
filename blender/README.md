@@ -1,6 +1,11 @@
 # Blender
 <img src="preview.svg" width="200">
 
+## Install package
+```
+sudo apt install blender -y
+```
+
 ## Install flatpak
 ```
 flatpak install flathub org.blender.Blender
