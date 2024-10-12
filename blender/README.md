@@ -1,11 +1,6 @@
 # Blender
 <img src="preview.svg" width="200">
 
-## Install package
-```
-sudo apt install blender -y
-```
-
 ## Install flatpak
 ```
 flatpak install flathub org.blender.Blender
@@ -27,6 +22,11 @@ chmod +x ~/Blender/blender.desktop
 cp ~/Blender/blender.desktop "$USER_PATH/.local/share/applications"
 sudo cp ~/Blender/blender.desktop /usr/share/applications
 sudo cp ~/Blender/blender.svg /usr/share/icons/
+```
+
+## Install package
+```
+sudo apt install blender -y
 ```
 
 ## Uninstall
